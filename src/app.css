@@ -1,0 +1,7 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+/* Stops elastic scrolling */
+body {
+	overscroll-behavior: none;
+}
