@@ -9,7 +9,7 @@
     Contact
   */
 
-	import unt_logo from '$lib/assets/unt_logo.png';
+	// import unt_logo from '$lib/assets/unt_logo.png';
 </script>
 
 <!-- MAIN NAVBAR DISPLAY -->
@@ -20,7 +20,7 @@
 	<!-- LEFT ALIGNED NAVIGATION-->
 	<div class="flex h-full flex-row items-center">
 		<!-- MEAN GREEN RACING LOGO -->
-		<img src={unt_logo} alt="UNT Logo" class="h-full object-contain" />
+		<img src="/logo/unt_logo.png" alt="UNT Logo" class="h-full object-contain" />
 
 		<!-- NAVIGATION LINKS -->
 		<a href="/">Home</a>

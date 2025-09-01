@@ -1,14 +1,13 @@
 <!-- ROOT LAYOUT -->
 <script lang="ts">
 	import '../app.css';
-	import unt_logo_eagle from '$lib/assets/unt_logo_eagle.png';
 	import NavBar from '$lib/components/NavBar.svelte';
 
 	let { children } = $props();
 </script>
 
 <svelte:head>
-	<link rel="icon" href={unt_logo_eagle} />
+	<link rel="icon" href="/logo/unt_logo_eagle.png" />
 </svelte:head>
 
 <!-- FULL DIV -->

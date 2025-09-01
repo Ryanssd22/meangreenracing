@@ -3,7 +3,7 @@
 <script>
 	//Images and components
 	import HeroImage from '$lib/components/HeroImage.svelte';
-	import michigan from '$lib/assets/sae_photos/home/michigan.jpg';
+	// import michigan from '$lib/assets/sae_photos/home/michigan.jpg';
 </script>
 
 <!-- HERO COMPONENT -->
@@ -51,7 +51,7 @@
 
 		<!-- PHOTOS -->
 		<div class="flex w-1/2 flex-col">
-			<img src={michigan} alt="" />
+			<img src="sae_photos/home/michigan.jpg" alt="" />
 		</div>
 	</div>
 
