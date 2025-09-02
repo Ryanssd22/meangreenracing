@@ -7,11 +7,11 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href="/logo/untLogoEagle.png" />
+	<link rel="icon" href="logo/untLogoEagle.png" />
 </svelte:head>
 
 <!-- FULL DIV -->
-<div class="h-full w-full">
+<div class="h-full w-full font-[Montserrat]">
 	<!-- NAVBAR -->
 	<NavBar />
 

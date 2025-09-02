@@ -18,14 +18,16 @@
   backdrop-blur-xs"
 >
 	<!-- LEFT ALIGNED NAVIGATION-->
-	<div class="flex h-full flex-row items-center">
+	<div class="mx-8 flex h-full flex-row items-center gap-8">
 		<!-- MEAN GREEN RACING LOGO -->
-		<img src="/logo/untLogo.png" alt="UNT Logo" class="h-full object-contain" />
+		<img src="logo/untLogo.png" alt="UNT Logo" class="h-full object-contain" />
 
 		<!-- NAVIGATION LINKS -->
-		<a href="/">Home</a>
-		<a href="/about">About</a>
-		<a href="/members">Members</a>
+		<div class="flex gap-4 font-bold">
+			<a href="/">HOME</a>
+			<a href="/about">ABOUT</a>
+			<a href="/members">MEMBERS</a>
+		</div>
 	</div>
 
 	<!-- RIGHT ALIGNED SOCIALS -->
