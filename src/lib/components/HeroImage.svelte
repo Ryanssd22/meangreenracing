@@ -12,7 +12,7 @@
 	let preloadedImage = $state(undefined);
 	let heroImagesValues = Object.values(heroImages);
 	onMount(async () => {
-		const IMAGE_INTERVAL = 4000;
+		const IMAGE_INTERVAL = 7000;
 
 		await chooseRandomImage();
 		let randomImageInterval = setInterval(async () => {
@@ -42,17 +42,13 @@
 	}
 </script>
 
-<!-- {#each Object.entries(heroImages) as [path, image] (path)} -->
-<!-- 	<p>{image.default}</p> -->
-<!-- 	<img src={image.default} class="h-32" /> -->
-<!-- {/each} -->
 <div class="relative h-screen w-full overflow-hidden">
 	{#key currentImage}
 		<img
 			alt="Hero"
 			src={currentImage}
 			in:fly={{ y: 25, duration: 2000, easing: quintOut }}
-			out:fly={{ duration: 4000, y: -25 }}
+			out:fly={{ duration: 4000, easing: quintIn }}
 			class="absolute inset-0 h-full w-full object-cover"
 		/>
 	{/key}

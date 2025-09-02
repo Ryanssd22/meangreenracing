@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href="/logo/unt_logo_eagle.png" />
+	<link rel="icon" href="/logo/untLogoEagle.png" />
 </svelte:head>
 
 <!-- FULL DIV -->

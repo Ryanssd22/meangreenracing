@@ -7,7 +7,7 @@
 </script>
 
 <!-- HERO COMPONENT -->
-<div class="relative z-10 h-screen w-full overflow-y-hidden">
+<div class="relative z-10 h-screen w-full overflow-hidden">
 	<!-- HERO IMAGE -->
 	<div class="absolute inset-0 scale-103">
 		<HeroImage />
@@ -35,7 +35,7 @@
 
 			<div class="flex flex-col gap-2 indent-4">
 				<p>
-					UTA Racing is the Formula SAE team from The University of Texas at Arlington. Every year
+					UTA Racing is the Formula SAE team from The University of North Texas. Every year
 					our team designs and builds a formula car to compete in the SAE International Formula
 					SAE® Series against other universities across the globe.
 				</p>

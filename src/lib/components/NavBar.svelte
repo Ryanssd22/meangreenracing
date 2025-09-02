@@ -20,7 +20,7 @@
 	<!-- LEFT ALIGNED NAVIGATION-->
 	<div class="flex h-full flex-row items-center">
 		<!-- MEAN GREEN RACING LOGO -->
-		<img src="/logo/unt_logo.png" alt="UNT Logo" class="h-full object-contain" />
+		<img src="/logo/untLogo.png" alt="UNT Logo" class="h-full object-contain" />
 
 		<!-- NAVIGATION LINKS -->
 		<a href="/">Home</a>
