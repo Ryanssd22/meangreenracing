@@ -30,7 +30,6 @@
 		// Setting current image
 		if (!preloadedImage) {
 			const index = Math.floor(Math.random() * heroImagesValues.length);
-      console.log("Getting", index)
 			let imageModule = await heroImagesValues[index]();
 			currentImage = imageModule.default;
 		} else {
@@ -38,28 +37,35 @@
 		}
 
 		// Preloading next image
-		const index = Math.floor(Math.random() * heroImagesValues.length);
+		const index = Math.floor(Math.random() * heroImagesValues.length - 1);
 		let imageModule = await heroImagesValues[index]();
 		preloadedImage = imageModule.default;
 
 		console.log('Image switched to', index);
 	}
 
-  // $inspect(currentImage);
+	// $inspect(currentImage);
 </script>
 
-<div class="relative h-screen w-full overflow-hidden">
+<div class="relative h-screen w-full overflow-hidden bg-black">
 	{#if currentImage}
 		{#key currentImage}
 			<enhanced:img
 				alt="Hero"
 				src={currentImage}
-				in:fly={{ y: 25, duration: 2000, easing: quintOut }}
-				out:fly={{ duration: 4000, easing: quintIn }}
+				in:fly|global={{ y: 25, duration: 2000, easing: quintOut }}
+				out:fly|global={{ duration: 4000, easing: quintIn }}
 				class="absolute inset-0 h-full w-full object-cover"
 			/>
 		{/key}
 	{:else}
 		<p>Loading...</p>
+	{/if}
+	{#if preloadedImage}
+		<enhanced:img
+			alt="Hero"
+			src={preloadedImage}
+			class="absolute inset-0 h-full w-full object-cover opacity-0"
+		/>
 	{/if}
 </div>
