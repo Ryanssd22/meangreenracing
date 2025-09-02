@@ -52,7 +52,7 @@
 			alt="Hero"
 			src={currentImage}
 			in:fly={{ y: 25, duration: 2000, easing: quintOut }}
-			out:fly={{ duration: 1500, y: -25 }}
+			out:fly={{ duration: 4000, y: -25 }}
 			class="absolute inset-0 h-full w-full object-cover"
 		/>
 	{/key}
