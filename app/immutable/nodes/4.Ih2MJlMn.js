@@ -1,0 +1,1 @@
+import"../chunks/DsnmJJEf.js";import"../chunks/69_IOA4Y.js";import{f as r,a as p}from"../chunks/Ds2NsT0r.js";var t=r('<div class="h-64 w-64 bg-blue-500">Hello</div>');function l(o){var a=t();p(o,a)}export{l as component};
