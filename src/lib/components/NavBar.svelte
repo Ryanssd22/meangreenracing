@@ -1,7 +1,5 @@
 <!-- Root Layout Nav Bar -->
 <script>
-	import { onMount } from 'svelte';
-
 	/*
   Menu:
     Home
@@ -12,14 +10,29 @@
   */
 
 	// import unt_logo from '$lib/assets/unt_logo.png';
+	import { page } from '$app/state';
+	import { afterNavigate, beforeNavigate } from '$app/navigation';
+	let pathname = $derived(page.url.pathname);
 
 	let scrollY = $state(0);
 	let altNavbar = $derived.by(() => {
-		if (scrollY < 30) {
-			return false;
+		if (pathname == '/') {
+			if (scrollY < 200) {
+				return false;
+			} else {
+				return true;
+			}
 		} else {
 			return true;
 		}
+	});
+
+	let navigating = $state(false);
+	beforeNavigate(() => {
+		navigating = true;
+	});
+	afterNavigate(() => {
+		navigating = false;
 	});
 </script>
 
@@ -29,7 +42,9 @@
 <!-- MAIN NAVBAR DISPLAY -->
 <div
 	class="fixed z-50 flex h-20 w-full flex-row items-center justify-between border-b-1 border-b-white/30 py-2 text-white shadow-xl
-  backdrop-blur-xs transition-colors duration-250"
+  backdrop-blur-xs transition-colors"
+	class:duration-250={!navigating}
+	class:duration-0={navigating}
 	class:bg-black={altNavbar}
 >
 	<!-- LEFT ALIGNED NAVIGATION-->

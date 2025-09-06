@@ -6,6 +6,7 @@
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 	import { quintIn, quintOut } from 'svelte/easing';
+	import { beforeNavigate } from '$app/navigation';
 	const heroImages = import.meta.glob('/src/lib/assets/sae_photos/hero/*.jpg', {
 		query: { enhanced: true }
 	});
@@ -44,28 +45,34 @@
 		console.log('Image switched to', index);
 	}
 
+	//Disables transitions
+	let navigating = $state(false);
+	beforeNavigate(() => {
+		navigating = true;
+	});
+
 	// $inspect(currentImage);
 </script>
 
 <div class="relative h-screen w-full overflow-hidden bg-black">
-	{#if currentImage}
-		{#key currentImage}
-			<enhanced:img
-				alt="Hero"
-				src={currentImage}
-				in:fly|global={{ y: 25, duration: 2000, easing: quintOut }}
-				out:fly|global={{ duration: 4000, easing: quintIn }}
-				class="absolute inset-0 h-full w-full object-cover"
-			/>
-		{/key}
-	{:else}
-		<p>Loading...</p>
-	{/if}
 	{#if preloadedImage}
 		<enhanced:img
 			alt="Hero"
 			src={preloadedImage}
 			class="absolute inset-0 h-full w-full object-cover opacity-0"
 		/>
+	{/if}
+	{#if currentImage}
+		{#key currentImage}
+			<enhanced:img
+				alt="Hero"
+				src={currentImage}
+				in:fly|global={{ y: 25, duration: 2000, easing: quintOut }}
+				out:fly|global={!navigating ? { duration: 4000, easing: quintIn } : { duration: 0 }}
+				class="absolute inset-0 h-full w-full object-cover"
+			/>
+		{/key}
+	{:else}
+		<p>Loading...</p>
 	{/if}
 </div>
