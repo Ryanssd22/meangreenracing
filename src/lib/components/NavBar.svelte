@@ -60,6 +60,8 @@
 			<a href="/about">ABOUT</a>
 			<a href="/members">MEMBERS</a>
 		</div>
+
+    <p>ScrollY: {scrollY}</p>
 	</div>
 
 	<!-- RIGHT ALIGNED SOCIALS -->
