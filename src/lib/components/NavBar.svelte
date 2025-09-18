@@ -34,6 +34,8 @@
 	afterNavigate(() => {
 		navigating = false;
 	});
+
+  $inspect("BINDY:", scrollY);
 </script>
 
 <!-- SCROLL TRACKING -->
