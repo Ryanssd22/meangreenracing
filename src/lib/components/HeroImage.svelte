@@ -10,19 +10,46 @@
 	const heroImages = import.meta.glob('/src/lib/assets/sae_photos/hero/*.jpg', {
 		query: { enhanced: true }
 	});
+	// const heroImages = import.meta.glob('/src/lib/assets/sae_photos/hero/*.jpg?enhanced=true')
 
 	// let currentImage = $state('$lib/assets/sae_photos/hero/9F0A3610.jpg?enhanced');
+	let scrollY = $state(0);
+	let viewportHeight = $state(0);
 	let currentImage = $state(null);
 	let preloadedImage = $state(null);
 	let heroImagesValues = Object.values(heroImages);
+	let randomImageTimeout = undefined;
 	onMount(async () => {
-		const IMAGE_INTERVAL = 4000;
-
 		await chooseRandomImage();
-		let randomImageInterval = setInterval(async () => {
-			await chooseRandomImage();
-		}, IMAGE_INTERVAL);
+		// let randomImageInterval = setInterval(async () => {
+		// 	await chooseRandomImage();
+		// }, IMAGE_INTERVAL);
+		setImageTimeout();
 	});
+	async function setImageTimeout() {
+		const IMAGE_TIMEOUT = 4000;
+		randomImageTimeout = setTimeout(async () => {
+			await chooseRandomImage();
+			setImageTimeout();
+		}, IMAGE_TIMEOUT);
+	}
+
+	//Start and stop timeout handling
+	let timeoutStop = false;
+	$effect(() => {
+		if (scrollY > viewportHeight && !timeoutStop) {
+			console.log('TIMEOUT STOP');
+      clearTimeout(randomImageTimeout);
+			timeoutStop = true;
+		}
+    if ((scrollY < viewportHeight) && timeoutStop) {
+      console.log('TIMEOUT START');
+      timeoutStop = false;
+      setImageTimeout();
+    }
+	});
+
+	$inspect('CURRENT IMAGE: ', currentImage);
 
 	// Chooses random image from heroImagesValues
 	async function chooseRandomImage() {
@@ -38,7 +65,7 @@
 		}
 
 		// Preloading next image
-		const index = Math.floor(Math.random() * heroImagesValues.length - 1);
+		const index = Math.floor(Math.random() * heroImagesValues.length);
 		let imageModule = await heroImagesValues[index]();
 		preloadedImage = imageModule.default;
 
@@ -53,6 +80,9 @@
 
 	// $inspect(currentImage);
 </script>
+
+<!-- SCROLL & HEIGHT TRACKING -->
+<svelte:window bind:scrollY bind:innerHeight={viewportHeight} />
 
 <div class="relative h-screen w-full overflow-hidden bg-black">
 	{#if preloadedImage}

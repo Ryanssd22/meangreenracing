@@ -9,6 +9,10 @@
     Contact
   */
 
+  //ICONS
+  import MdiInstagram from '~icons/mdi/instagram';
+  import MdiFacebook from '~icons/mdi/facebook';
+
 	// import unt_logo from '$lib/assets/unt_logo.png';
 	import { page } from '$app/state';
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
@@ -34,8 +38,6 @@
 	afterNavigate(() => {
 		navigating = false;
 	});
-
-  $inspect("BINDY:", scrollY);
 </script>
 
 <!-- SCROLL TRACKING -->
@@ -60,13 +62,25 @@
 			<a href="/about">ABOUT</a>
 			<a href="/members">MEMBERS</a>
 		</div>
-
-    <p>ScrollY: {scrollY}</p>
 	</div>
 
 	<!-- RIGHT ALIGNED SOCIALS -->
-	<div class="flex flex-row">
-		<!-- FACEBOOK -->
-		<p>Facebook</p>
+	<div class="flex flex-row items-center mr-4 gap-2">
+    <!-- INSTAGRAM -->
+    <a href="https://www.instagram.com/meangreenracing/?hl=en">
+      <MdiInstagram class="size-6"/>
+    </a>
+
+    <!-- FACEBOOK -->
+    <a href="https://www.facebook.com/UNTMeanGreenRacing/">
+      <MdiFacebook class="size-6" />
+    </a>
 	</div>
 </div>
+
+<style>
+a:hover {
+  color:green;
+  transition: color 0.1s ease-in-out;
+}
+</style>

@@ -1,0 +1,32 @@
+[
+	{
+		"name": "Suleiman",
+		"title": "President",
+		"description": "Lorem Ipsum",
+		"image": "suleiman.jpg"
+	},
+	{
+		"name": "Emily",
+		"title": "Vice President",
+		"description": "Lorem Ipsum",
+		"image": "emily.jpg"
+	},
+	{
+		"name": "Zach",
+		"title": "EV Power Train Lead",
+		"description": "Lorem Ipsum",
+		"image": "zach.jpg"
+	},
+  {
+    "name": "Mario",
+    "title": "Electrical Lead",
+    "description": "It'sa-me",
+    "image": "mario.jpg"
+  },
+  {
+    "name": "Hidar",
+    "title": "Lorem Ipsum",
+    "description": "Lorem Ipsum",
+    "image": "hidar.jpg"
+  }
+]
