@@ -10,7 +10,7 @@
 <div class="relative z-10 h-screen w-full overflow-hidden">
 	<!-- HERO IMAGE -->
 	<div class="absolute inset-0 scale-103">
-		<HeroImage />
+		<!-- <HeroImage /> -->
 	</div>
 
 	<!-- BODY CONTENT -->
@@ -105,11 +105,11 @@
 	</div>
 
 	<!-- MEET OUR CREW -->
-	<div class="flex w-full flex-col items-center py-8 px-4">
+	<div class="flex w-full flex-col items-center px-4 py-8">
 		<h2 class="text-4xl font-bold text-green-700">Meet Our Crew</h2>
 
 		<!-- CAROUSEL (EMBLA) -->
-		<CrewCarousel />
+		<!-- <CrewCarousel /> -->
 	</div>
 
 	<!-- CONTACT US -->

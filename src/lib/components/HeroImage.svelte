@@ -18,7 +18,7 @@
 	let currentImage = $state(null);
 	let preloadedImage = $state(null);
 	let heroImagesValues = Object.values(heroImages);
-	let randomImageTimeout = undefined;
+	let randomImageTimeout = null;
 	onMount(async () => {
 		await chooseRandomImage();
 		// let randomImageInterval = setInterval(async () => {
@@ -28,10 +28,12 @@
 	});
 	async function setImageTimeout() {
 		const IMAGE_TIMEOUT = 4000;
-		randomImageTimeout = setTimeout(async () => {
-			await chooseRandomImage();
-			setImageTimeout();
-		}, IMAGE_TIMEOUT);
+		if (!timeoutStop) {
+			randomImageTimeout = setTimeout(async () => {
+				await chooseRandomImage();
+				setImageTimeout();
+			}, IMAGE_TIMEOUT);
+		}
 	}
 
 	//Start and stop timeout handling
@@ -39,14 +41,14 @@
 	$effect(() => {
 		if (scrollY > viewportHeight && !timeoutStop) {
 			console.log('TIMEOUT STOP');
-      clearTimeout(randomImageTimeout);
+			clearTimeout(randomImageTimeout);
 			timeoutStop = true;
 		}
-    if ((scrollY < viewportHeight) && timeoutStop) {
-      console.log('TIMEOUT START');
-      timeoutStop = false;
-      setImageTimeout();
-    }
+		if (scrollY < viewportHeight && timeoutStop) {
+			console.log('TIMEOUT START');
+			timeoutStop = false;
+			setImageTimeout();
+		}
 	});
 
 	$inspect('CURRENT IMAGE: ', currentImage);

@@ -2,7 +2,7 @@
 	import emblaCarouselSvelte from 'embla-carousel-svelte';
 	import AutoScroll from 'embla-carousel-auto-scroll';
 	import headshot_descriptions from '$lib/headshots/headshot_descriptions.json';
-	const headshot_images = import.meta.glob('$lib/headshots/*.jpg');
+	const headshot_images = import.meta.glob('$lib/headshots/*.png');
 
 	let emblaApi;
 	const options = {
@@ -35,7 +35,7 @@
 		onemblaInit={onInit}
 	>
 		<div class="embla__container my-2">
-			{#each headshot_descriptions as headshot}
+			{#each headshot_descriptions as headshot (headshot.name)}
 				<div class="embla__slide flex-center flex w-full items-center">
 					<div class="m-auto flex flex-col">
 						<div class="h-60 w-50 overflow-hidden rounded-md">
@@ -72,13 +72,13 @@
 		display: flex;
 	}
 	.embla__slide {
-		flex: 0 0 38%;
+		flex: 0 0 100%;
 		min-width: 0;
 	}
 
-	@media (width >= 64rem) {
-		.embla__slide {
-			flex: 0 0 25%;
-		}
-	}
+	/* @media (width >= 64rem) { */
+	/* 	.embla__slide { */
+	/* 		flex: 0 0 25%; */
+	/* 	} */
+	/* } */
 </style>

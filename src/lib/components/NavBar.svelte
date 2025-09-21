@@ -9,9 +9,9 @@
     Contact
   */
 
-  //ICONS
-  import MdiInstagram from '~icons/mdi/instagram';
-  import MdiFacebook from '~icons/mdi/facebook';
+	//ICONS
+	import MdiInstagram from '~icons/mdi/instagram';
+	import MdiFacebook from '~icons/mdi/facebook';
 
 	// import unt_logo from '$lib/assets/unt_logo.png';
 	import { page } from '$app/state';
@@ -30,6 +30,8 @@
 			return true;
 		}
 	});
+
+	$inspect(scrollY);
 
 	let navigating = $state(false);
 	beforeNavigate(() => {
@@ -65,22 +67,22 @@
 	</div>
 
 	<!-- RIGHT ALIGNED SOCIALS -->
-	<div class="flex flex-row items-center mr-4 gap-2">
-    <!-- INSTAGRAM -->
-    <a href="https://www.instagram.com/meangreenracing/?hl=en">
-      <MdiInstagram class="size-6"/>
-    </a>
+	<div class="mr-4 flex flex-row items-center gap-2">
+		<!-- INSTAGRAM -->
+		<a href="https://www.instagram.com/meangreenracing/?hl=en">
+			<MdiInstagram class="size-6" />
+		</a>
 
-    <!-- FACEBOOK -->
-    <a href="https://www.facebook.com/UNTMeanGreenRacing/">
-      <MdiFacebook class="size-6" />
-    </a>
+		<!-- FACEBOOK -->
+		<a href="https://www.facebook.com/UNTMeanGreenRacing/">
+			<MdiFacebook class="size-6" />
+		</a>
 	</div>
 </div>
 
 <style>
-a:hover {
-  color:green;
-  transition: color 0.1s ease-in-out;
-}
+	a:hover {
+		color: green;
+		transition: color 0.1s ease-in-out;
+	}
 </style>
