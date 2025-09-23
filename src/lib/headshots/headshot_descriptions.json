@@ -1,32 +1,104 @@
 [
 	{
-		"name": "Suleiman",
+		"name": "Suleiman Abu-Suleiman",
 		"title": "President",
 		"description": "Lorem Ipsum",
-		"image": "suleiman.png"
+		"image": "suleiman.webp"
 	},
 	{
-		"name": "Emily",
+		"name": "Emily Gooden",
 		"title": "Vice President",
 		"description": "Lorem Ipsum",
-		"image": "emily.png"
+		"image": "emily.webp"
 	},
 	{
 		"name": "Zach",
 		"title": "EV Power Train Lead",
 		"description": "Lorem Ipsum",
-		"image": "zach.png"
+		"image": "zach.webp"
 	},
 	{
 		"name": "Mario",
 		"title": "Electrical Lead",
 		"description": "It'sa-me",
-		"image": "mario.png"
+		"image": "mario.webp"
 	},
 	{
 		"name": "Hidar",
 		"title": "Lorem Ipsum",
 		"description": "Lorem Ipsum",
-		"image": "hidar.png"
-	}
+		"image": "hidar.webp"
+	},
+  {
+		"name": "Clayton",
+		"title": "Lorem Ipsum",
+		"description": "Lorem Ipsum",
+		"image": "clayton.webp"
+	},
+  {
+		"name": "Hayden",
+		"title": "Lorem Ipsum",
+		"description": "Lorem Ipsum",
+		"image": "hayden.webp"
+	},
+  {
+		"name": "Lorem Ipsum1",
+		"title": "Lorem Ipsum",
+		"description": "Lorem Ipsum",
+		"image": "unk1.webp"
+	},
+  {
+		"name": "Lorem Ipsum2",
+		"title": "Lorem Ipsum",
+		"description": "Lorem Ipsum",
+		"image": "unk2.webp"
+	},
+  {
+		"name": "Lorem Ipsum3",
+		"title": "Lorem Ipsum",
+		"description": "Lorem Ipsum",
+		"image": "unk3.webp"
+	},
+  {
+		"name": "Lorem Ipsum4",
+		"title": "Lorem Ipsum",
+		"description": "Lorem Ipsum",
+		"image": "unk4.webp"
+	},
+  {
+		"name": "Lorem Ipsum5",
+		"title": "Lorem Ipsum",
+		"description": "Lorem Ipsum",
+		"image": "unk5.webp"
+	},
+  {
+		"name": "Lorem Ipsum6",
+		"title": "Lorem Ipsum",
+		"description": "Lorem Ipsum",
+		"image": "unk6.webp"
+	},
+  {
+		"name": "Lorem Ipsum7",
+		"title": "Lorem Ipsum",
+		"description": "Lorem Ipsum",
+		"image": "unk7.webp"
+	},
+  {
+		"name": "Lorem Ipsum8",
+		"title": "Lorem Ipsum",
+		"description": "Lorem Ipsum",
+		"image": "unk8.webp"
+	},
+  {
+		"name": "Lorem Ipsum9",
+		"title": "Lorem Ipsum",
+		"description": "Lorem Ipsum",
+		"image": "unk9.webp"
+	},
+  {
+		"name": "Lorem Ipsum10",
+		"title": "Lorem Ipsum",
+		"description": "Lorem Ipsum",
+		"image": "unk10.webp"
+  }
 ]

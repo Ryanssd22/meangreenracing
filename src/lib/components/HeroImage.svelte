@@ -10,9 +10,9 @@
 	const heroImages = import.meta.glob('/src/lib/assets/sae_photos/hero/*.jpg', {
 		query: { enhanced: true }
 	});
-	// const heroImages = import.meta.glob('/src/lib/assets/sae_photos/hero/*.jpg?enhanced=true')
 
-	// let currentImage = $state('$lib/assets/sae_photos/hero/9F0A3610.jpg?enhanced');
+  const IMAGE_TIMEOUT = 6000;
+
 	let scrollY = $state(0);
 	let viewportHeight = $state(0);
 	let currentImage = $state(null);
@@ -27,7 +27,6 @@
 		setImageTimeout();
 	});
 	async function setImageTimeout() {
-		const IMAGE_TIMEOUT = 4000;
 		if (!timeoutStop) {
 			randomImageTimeout = setTimeout(async () => {
 				await chooseRandomImage();
@@ -105,6 +104,6 @@
 			/>
 		{/key}
 	{:else}
-		<p>Loading...</p>
+		<!-- <p>Loading...</p> -->
 	{/if}
 </div>

@@ -31,8 +31,6 @@
 		}
 	});
 
-	$inspect(scrollY);
-
 	let navigating = $state(false);
 	beforeNavigate(() => {
 		navigating = true;

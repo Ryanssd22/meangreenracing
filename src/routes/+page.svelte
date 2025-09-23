@@ -4,22 +4,40 @@
 	//Images and components
 	import HeroImage from '$lib/components/HeroImage.svelte';
 	import CrewCarousel from '$lib/components/CrewCarousel.svelte';
+  import { fly } from 'svelte/transition';
+
+  //Hero text
+  const hero_text_choices = ["Engineers", "Innovators", "Businessmen", "Developers"];
+  const HERO_INTERVAL = 2500;
+  let hero_index = $state(0);
+  let hero_text = $derived(hero_text_choices[hero_index]);
+  const hero_text_interval = setInterval(() => {
+    const previous_index = hero_index;
+    while (previous_index == hero_index) {
+      hero_index = Math.floor(Math.random() * hero_text_choices.length);
+    }
+  }, HERO_INTERVAL);
 </script>
 
 <!-- HERO COMPONENT -->
 <div class="relative z-10 h-screen w-full overflow-hidden">
 	<!-- HERO IMAGE -->
 	<div class="absolute inset-0 scale-103">
-		<!-- <HeroImage /> -->
+		<HeroImage />
 	</div>
 
 	<!-- BODY CONTENT -->
 	<div class="absolute inset-0 z-20 flex h-full w-full flex-row px-10 text-white">
 		<div class="w-1/2"></div>
 		<div class="flex w-1/2 flex-col items-center justify-center">
-			<h1 class="text-6xl font-bold text-shadow-lg/90">
-				The Next-Generation of Engineers, Innovators, and Leaders
-			</h1>
+      <h1 class="text-6xl font-bold text-shadow-lg/90">
+        Forming the Next Generation of 
+        <div  class="overflow-hidden h-20 w-full">
+          {#key hero_text}
+            <h1 in:fly={{ y:5, delay:400 }} out:fly={{ y:-5, duration:400 }}>{hero_text}</h1>
+          {/key}
+        </div>
+      </h1>
 			<button> About us </button>
 		</div>
 	</div>
@@ -109,7 +127,7 @@
 		<h2 class="text-4xl font-bold text-green-700">Meet Our Crew</h2>
 
 		<!-- CAROUSEL (EMBLA) -->
-		<!-- <CrewCarousel /> -->
+		<CrewCarousel />
 	</div>
 
 	<!-- CONTACT US -->
