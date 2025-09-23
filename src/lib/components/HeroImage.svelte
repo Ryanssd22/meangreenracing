@@ -7,11 +7,11 @@
 	import { fly } from 'svelte/transition';
 	import { quintIn, quintOut } from 'svelte/easing';
 	import { beforeNavigate } from '$app/navigation';
-	const heroImages = import.meta.glob('/src/lib/assets/sae_photos/hero/*.jpg', {
+	const heroImages = import.meta.glob('/src/lib/assets/sae_photos/hero/*.webp', {
 		query: { enhanced: true }
 	});
 
-  const IMAGE_TIMEOUT = 6000;
+	const IMAGE_TIMEOUT = 6000;
 
 	let scrollY = $state(0);
 	let viewportHeight = $state(0);
