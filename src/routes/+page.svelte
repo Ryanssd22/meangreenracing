@@ -147,3 +147,10 @@
 		<p>Interested in joining? Or just want to learn more about the field?</p>
 	</div>
 </div>
+
+<style>
+	h2 {
+		font-family: Bronzier;
+		letter-spacing: 0.03em;
+	}
+</style>

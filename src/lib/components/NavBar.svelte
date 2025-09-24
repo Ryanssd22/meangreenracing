@@ -57,7 +57,7 @@
 		<img src="logo/untLogo.png" alt="UNT Logo" class="h-full object-contain" />
 
 		<!-- NAVIGATION LINKS -->
-		<div class="flex gap-4 font-bold">
+		<div class="flex gap-4 font-[Bronzier] text-xl italic">
 			<a href="/">HOME</a>
 			<a href="/about">ABOUT</a>
 			<a href="/members">MEMBERS</a>
