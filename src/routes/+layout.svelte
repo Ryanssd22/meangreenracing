@@ -21,7 +21,7 @@
 </svelte:head>
 
 <!-- FULL DIV -->
-<div class="h-full w-full font-[Montserrat]">
+<div class="h-full w-full overflow-hidden font-[Montserrat]">
 	<!-- NAVBAR -->
 	<NavBar />
 

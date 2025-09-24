@@ -7,23 +7,26 @@
 	import { fly } from 'svelte/transition';
 	import { quintIn, quintOut } from 'svelte/easing';
 	import { beforeNavigate } from '$app/navigation';
-	const heroImages = import.meta.glob('/src/lib/assets/sae_photos/hero/*.webp', {
-		query: { enhanced: true }
-	});
 
-	const IMAGE_TIMEOUT = 6000;
+	//Image imports
+	import firstImage from '$lib/assets/sae_photos/hero/9F0A3895.webp';
+	const heroImages = import.meta.glob('/src/lib/assets/sae_photos/hero/*.webp');
+
+	const IMAGE_TIMEOUT = 4000;
 
 	let scrollY = $state(0);
 	let viewportHeight = $state(0);
-	let currentImage = $state(null);
-	let preloadedImage = $state(null);
+	let preloadedImage = $state(firstImage);
+	let currentImage = $state(firstImage);
 	let heroImagesValues = Object.values(heroImages);
+
+	console.log('Hero Images:', heroImagesValues);
+
 	let randomImageTimeout = null;
 	onMount(async () => {
+		console.log('Mounting, choosing first image...');
+
 		await chooseRandomImage();
-		// let randomImageInterval = setInterval(async () => {
-		// 	await chooseRandomImage();
-		// }, IMAGE_INTERVAL);
 		setImageTimeout();
 	});
 	async function setImageTimeout() {
@@ -54,23 +57,17 @@
 
 	// Chooses random image from heroImagesValues
 	async function chooseRandomImage() {
-		console.log('Switching Image...');
+		console.log('Choosing Image...');
 
 		// Setting current image
-		if (!preloadedImage) {
-			const index = Math.floor(Math.random() * heroImagesValues.length);
-			let imageModule = await heroImagesValues[index]();
-			currentImage = imageModule.default;
-		} else {
-			currentImage = preloadedImage;
-		}
+		currentImage = preloadedImage;
 
 		// Preloading next image
 		const index = Math.floor(Math.random() * heroImagesValues.length);
 		let imageModule = await heroImagesValues[index]();
 		preloadedImage = imageModule.default;
 
-		console.log('Image switched to', index);
+		console.log('Preloaded Image', index);
 	}
 
 	//Disables transitions
@@ -78,8 +75,6 @@
 	beforeNavigate(() => {
 		navigating = true;
 	});
-
-	// $inspect(currentImage);
 </script>
 
 <!-- SCROLL & HEIGHT TRACKING -->
@@ -87,7 +82,7 @@
 
 <div class="relative h-screen w-full overflow-hidden bg-black">
 	{#if preloadedImage}
-		<enhanced:img
+		<img
 			alt="Hero"
 			src={preloadedImage}
 			class="absolute inset-0 h-full w-full object-cover opacity-0"
@@ -95,10 +90,10 @@
 	{/if}
 	{#if currentImage}
 		{#key currentImage}
-			<enhanced:img
+			<img
 				alt="Hero"
 				src={currentImage}
-				in:fly|global={{ y: 25, duration: 2000, easing: quintOut }}
+				in:fly|global={!navigating ? { y: 25, duration: 2000, easing: quintOut } : { duration: 0 }}
 				out:fly|global={!navigating ? { duration: 4000, easing: quintIn } : { duration: 0 }}
 				class="absolute inset-0 h-full w-full object-cover"
 			/>

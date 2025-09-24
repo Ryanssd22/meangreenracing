@@ -4,19 +4,19 @@
 	//Images and components
 	import HeroImage from '$lib/components/HeroImage.svelte';
 	import CrewCarousel from '$lib/components/CrewCarousel.svelte';
-  import { fly } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 
-  //Hero text
-  const hero_text_choices = ["Engineers", "Innovators", "Businessmen", "Developers"];
-  const HERO_INTERVAL = 2500;
-  let hero_index = $state(0);
-  let hero_text = $derived(hero_text_choices[hero_index]);
-  const hero_text_interval = setInterval(() => {
-    const previous_index = hero_index;
-    while (previous_index == hero_index) {
-      hero_index = Math.floor(Math.random() * hero_text_choices.length);
-    }
-  }, HERO_INTERVAL);
+	//Hero text
+	const hero_text_choices = ['Engineers', 'Innovators', 'Businessmen', 'Developers'];
+	const HERO_INTERVAL = 3500;
+	let hero_index = $state(0);
+	let hero_text = $derived(hero_text_choices[hero_index]);
+	const hero_text_interval = setInterval(() => {
+		const previous_index = hero_index;
+		while (previous_index == hero_index) {
+			hero_index = Math.floor(Math.random() * hero_text_choices.length);
+		}
+	}, HERO_INTERVAL);
 </script>
 
 <!-- HERO COMPONENT -->
@@ -30,14 +30,14 @@
 	<div class="absolute inset-0 z-20 flex h-full w-full flex-row px-10 text-white">
 		<div class="w-1/2"></div>
 		<div class="flex w-1/2 flex-col items-center justify-center">
-      <h1 class="text-6xl font-bold text-shadow-lg/90">
-        Forming the Next Generation of 
-        <div  class="overflow-hidden h-20 w-full">
-          {#key hero_text}
-            <div in:fly={{ y:5, delay:400 }} out:fly={{ y:-5, duration:400 }}>{hero_text}</div>
-          {/key}
-        </div>
-      </h1>
+			<h1 class="text-8xl font-bold text-shadow-lg/90">
+				Forming the Next Generation of
+				<div class="h-30 w-full overflow-hidden">
+					{#key hero_text}
+						<div in:fly={{ y: 5, delay: 400 }} out:fly={{ y: -5, duration: 400 }}>{hero_text}</div>
+					{/key}
+				</div>
+			</h1>
 			<button> About us </button>
 		</div>
 	</div>
@@ -49,7 +49,7 @@
 	<div class="mx-4 flex flex-row items-center justify-center gap-4 py-8">
 		<!-- BODY -->
 		<div class="w-1/2">
-			<h2 class="mb-4 flex w-full justify-center text-4xl font-bold text-green-700">About us</h2>
+			<h2 class="mb-4 flex w-full justify-center text-5xl font-bold text-green-700">About us</h2>
 
 			<div class="flex flex-col gap-2 indent-4">
 				<p>
@@ -64,6 +64,17 @@
 					organization, we prioritize student-to-student mentorship, research, and accountability in
 					the pursuit of automotive greatness.
 				</p>
+				<p>
+					Every year, Mean Green Racing travels to Michigan to compete in the Formula SAE Michigan
+					event, a premier competition that draws top university teams from around the world. This
+					event isn't just a race; it's a comprehensive evaluation of our team's work, where we're
+					judged on design, cost, and business presentation, as well as the dynamic performance of
+					our car. The competition includes a series of events like acceleration, skid-pad,
+					autocross, and a grueling endurance race, all of which test the engineering and
+					reliability of our vehicle under real-world conditions. It's the culmination of months of
+					hard work, offering an unparalleled opportunity to showcase our innovative solutions and
+					compete against the best in collegiate motorsports.
+				</p>
 			</div>
 		</div>
 
@@ -76,7 +87,7 @@
 	<!-- WHAT WE DO -->
 	<div class="flex w-full flex-col items-center gap-4 bg-green-700 px-4 py-8 text-white">
 		<!-- HEADER -->
-		<h2 class="text-4xl font-bold">What We Do</h2>
+		<h2 class="text-5xl font-bold">What We Do</h2>
 
 		<!-- TRI SPLIT CONTENT -->
 		<!-- <div class="flex gap-8"> -->
@@ -124,7 +135,7 @@
 
 	<!-- MEET OUR CREW -->
 	<div class="flex w-full flex-col items-center px-4 py-8">
-		<h2 class="text-4xl font-bold text-green-700">Meet Our Crew</h2>
+		<h2 class="text-5xl font-bold text-green-700">Meet Our Crew</h2>
 
 		<!-- CAROUSEL (EMBLA) -->
 		<CrewCarousel />
@@ -132,7 +143,7 @@
 
 	<!-- CONTACT US -->
 	<div class="flex w-full flex-col items-center bg-gray-100 py-8">
-		<h2 class="mb-4 text-4xl font-bold text-green-700">Pit Stop</h2>
+		<h2 class="mb-4 text-5xl font-bold text-green-700">Pit Stop</h2>
 		<p>Interested in joining? Or just want to learn more about the field?</p>
 	</div>
 </div>

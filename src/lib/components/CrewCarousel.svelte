@@ -7,7 +7,8 @@
 	let emblaApi;
 	const options = {
 		loop: true,
-		startIndex: 1
+		startIndex: 1,
+		dragFree: true
 	};
 	const plugins = [AutoScroll({ speed: 1 })];
 
@@ -37,19 +38,28 @@
 		<div class="embla__container my-2">
 			{#each headshot_descriptions as headshot (headshot.name)}
 				<div class="embla__slide flex-center flex w-full items-center">
-					<div class="flex flex-col m-auto">
-						<div class="relative h-60 w-50 overflow-hidden rounded-md">
-              <!-- GRADIENT BACKGROUND -->
-              <div class="absolute inset-0 bg-gradient-to-t from-green-800 from-20% to-80% to-white/0"></div>
+					<div class="m-auto flex flex-col">
+						<!-- PHOTO -->
+						<div
+							class="group relative h-60 w-50 overflow-hidden rounded-md transition-all duration-400 hover:scale-104 hover:rotate-1"
+						>
+							<!-- GRADIENT BACKGROUND -->
+							<div
+								class="absolute inset-0 bg-gradient-to-t from-green-800 from-20% to-white/0 to-80% transition-colors group-hover:from-green-600"
+							></div>
 
-              <!-- HEADSHOT IMAGE -->
+							<!-- HEADSHOT IMAGE -->
 							{#await headshot_images[`/src/lib/headshots/${headshot.image}`]() then { default: src }}
-								<img {src} alt={headshot.name} class="absolute inset-0 h-full w-full object-cover" />
+								<img
+									{src}
+									alt={headshot.name}
+									class="absolute inset-0 h-full w-full object-cover transition-all duration-800 group-hover:scale-105"
+								/>
 							{/await}
 						</div>
 
-            <!-- HEADSHOT DESCRIPTION -->
-						<h2 class="font-bold">{headshot.name}</h2>
+						<!-- HEADSHOT DESCRIPTION -->
+						<h2 class="mt-1 font-bold">{headshot.name}</h2>
 						<h3 class="italic">{headshot.title}</h3>
 						<p>{headshot.description}</p>
 					</div>
@@ -64,10 +74,10 @@
 	</div>
 
 	<!-- BUTTONS -->
-	<div class="flex gap-2">
-		<button class="embla__prev cursor-pointer" onclick={scrollPrev}>Prev</button>
-		<button class="embla__next cursor-pointer" onclick={scrollNext}>Next</button>
-	</div>
+	<!-- <div class="flex gap-2"> -->
+	<!-- 	<button class="embla__prev cursor-pointer" onclick={scrollPrev}>Prev</button> -->
+	<!-- 	<button class="embla__next cursor-pointer" onclick={scrollNext}>Next</button> -->
+	<!-- </div> -->
 </div>
 
 <style>
@@ -78,14 +88,21 @@
 		display: flex;
 	}
 	.embla__slide {
-		flex: 0 0 33%;
+		flex: 0 0 80%;
 		min-width: 0;
 	}
 
-  /* DESKTOP SITE */
+	/* TABLET */
+	@media (width >= 48rem) {
+		.embla__slide {
+			flex: 0 0 28%;
+		}
+	}
+
+	/* DESKTOP SITE */
 	@media (width >= 64rem) {
 		.embla__slide {
-			flex: 0 0 25%;
+			flex: 0 0 20%;
 		}
 	}
 </style>
