@@ -1,1 +1,0 @@
-import"../chunks/DsnmJJEf.js";import"../chunks/Sl8SA8L2.js";import{f as o,b as m}from"../chunks/B5Qb3_Nd.js";var t=o('<iframe title="gaussian" src="/splat/animation.html" class="h-100 w-4/5" frameborder="0" allowfullscreen=""></iframe>');function f(a){var r=t();m(a,r)}export{f as component};
