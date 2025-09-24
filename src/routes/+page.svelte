@@ -34,7 +34,7 @@
         Forming the Next Generation of 
         <div  class="overflow-hidden h-20 w-full">
           {#key hero_text}
-            <h1 in:fly={{ y:5, delay:400 }} out:fly={{ y:-5, duration:400 }}>{hero_text}</h1>
+            <div in:fly={{ y:5, delay:400 }} out:fly={{ y:-5, duration:400 }}>{hero_text}</div>
           {/key}
         </div>
       </h1>
