@@ -3,4 +3,4 @@
 // avoid large performance and SEO impacts
 //
 // This is basically for the static adapter
-export const prerender = true;
+// export const prerender = true;
