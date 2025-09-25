@@ -58,7 +58,10 @@
 
 		<!-- NAVIGATION LINKS -->
 		<div class="flex gap-4 font-[Bronzier] text-xl italic">
-			<a href="/">HOME</a>
+			<a class="group" href="/">
+        HOME
+        <span class="block max-w-0 group-hover:max-w-full h-[1px] bg-green-600 transition-all -mt-1"></span>
+      </a>
 			<a href="/about">ABOUT</a>
 			<a href="/members">MEMBERS</a>
 		</div>
@@ -80,7 +83,7 @@
 
 <style>
 	a:hover {
-		color: green;
+		color: oklch(62.7% 0.194 149.214);
 		transition: color 0.1s ease-in-out;
 	}
 </style>

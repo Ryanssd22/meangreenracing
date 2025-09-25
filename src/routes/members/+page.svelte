@@ -2,13 +2,17 @@
 <script>
 	import headshot_descriptions from '$lib/headshots/headshot_descriptions.json';
   import { fly } from 'svelte/transition';
+  import crew_banner from '$lib/assets/sae_photos/banners/crew_banner.webp';
 	const headshot_images = import.meta.glob('$lib/headshots/*.webp');
 
 </script>
 
-<div class="flex-center flex flex-col w-full items-center p-4">
-  <!-- TITLE -->
-  <h1 class="font-bold text-green-700 text-6xl">Our Crew</h1>
+<div class="flex-center flex flex-col w-full items-center">
+  <!-- TITLE BANNER -->
+  <div class="w-full h-38 relative flex flex-center items-center overflow-hidden bg-green-700">
+    <img alt="Crew Banner" src={crew_banner} class="blur-xs object-cover w-full h-full absolute inset-0" />
+    <h1 class="m-auto relative font-bold text-white text-6xl">Our Crew</h1>
+  </div>
 
 	<!-- HEADSHOT GRID -->
 	<div class="grid w-full grid-cols-3 gap-4">

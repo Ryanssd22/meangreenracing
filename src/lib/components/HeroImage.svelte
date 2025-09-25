@@ -7,20 +7,19 @@
 	import { fly } from 'svelte/transition';
 	import { quintIn, quintOut } from 'svelte/easing';
 	import { beforeNavigate } from '$app/navigation';
+  import DotPattern from '$lib/components/DotPattern.svelte';
 
 	//Image imports
-	import firstImage from '$lib/assets/sae_photos/hero/9F0A3895.webp';
+	import firstImage from '$lib/assets/sae_photos/hero/9F0A3892.webp';
 	const heroImages = import.meta.glob('/src/lib/assets/sae_photos/hero/*.webp');
 
-	const IMAGE_TIMEOUT = 4000;
+	const IMAGE_TIMEOUT = 3000;
 
 	let scrollY = $state(0);
 	let viewportHeight = $state(0);
 	let preloadedImage = $state(firstImage);
 	let currentImage = $state(firstImage);
 	let heroImagesValues = Object.values(heroImages);
-
-	console.log('Hero Images:', heroImagesValues);
 
 	let randomImageTimeout = null;
 	onMount(async () => {
@@ -70,10 +69,12 @@
 		console.log('Preloaded Image', index);
 	}
 
-	//Disables transitions
+	//Disables transitions and hero timeout
 	let navigating = $state(false);
 	beforeNavigate(() => {
 		navigating = true;
+    clearTimeout(randomImageTimeout);
+    console.log("TIMEOUT CLEARED");
 	});
 </script>
 
@@ -95,10 +96,13 @@
 				src={currentImage}
 				in:fly|global={!navigating ? { y: 25, duration: 2000, easing: quintOut } : { duration: 0 }}
 				out:fly|global={!navigating ? { duration: 4000, easing: quintIn } : { duration: 0 }}
-				class="absolute inset-0 h-full w-full object-cover"
+				class="absolute inset-0 h-full w-full object-cover brightness-65"
 			/>
 		{/key}
 	{:else}
 		<!-- <p>Loading...</p> -->
 	{/if}
+
+  <!-- DOT PATTERN -->
+  <DotPattern fillColor="rgb(108 245 130 / 0.5)" class="[mask-image:radial-gradient(1000px_circle_at_center,transparent,white)]"/>
 </div>
