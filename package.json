@@ -40,6 +40,7 @@
 		"vite": "^7.1.6"
 	},
 	"dependencies": {
+		"@sveltejs/adapter-vercel": "^5.10.2",
 		"clsx": "^2.1.1",
 		"embla-carousel-auto-scroll": "^8.6.0",
 		"embla-carousel-svelte": "^8.6.0",
