@@ -9,11 +9,11 @@
 	let { children } = $props();
 
 	// Navigation Links
-	const navLinks = [
-		{ url: '/', name: 'Home' },
-		{ url: 'about', name: 'About' },
-		{ url: 'members', name: 'Members' }
-	];
+	// const navLinks = [
+	// 	{ url: '/', name: 'Home' },
+	// 	{ url: '/', name: 'About' },
+	// 	{ url: 'members', name: 'Members' }
+	// ];
 </script>
 
 <svelte:head>
@@ -21,12 +21,12 @@
 </svelte:head>
 
 <!-- FULL DIV -->
-<div class="h-full w-full overflow-hidden font-[Montserrat]">
+<div class="flex w-full overflow-x-hidden font-[Montserrat]">
 	<!-- NAVBAR -->
 	<NavBar />
 
 	<!-- MAIN CONTENT -->
-	<div class="relative" class:top-20={pathname != '/'}>
+	<div class="h-full w-full" class:mt-20={pathname != '/'}>
 		{@render children?.()}
 
 		<!-- FOOTER -->
@@ -34,15 +34,38 @@
 			<!-- NAVIGATION LINKS -->
 			<div class="flex flex-col">
 				<h2 class="font-bold">Navigate</h2>
-				<ul>
-					{#each navLinks as link (link.url)}
-						<li>
-							<a href={link.url}>{link.name}</a>
-						</li>
-					{/each}
-					<!-- <li><a href="/">Home</a></li> -->
-					<!-- <li><a href="about">About</a></li> -->
-					<!-- <li><a href="members">Members</a></li> -->
+				<ul class="list-disc">
+					<!-- {#each navLinks as link, i (i)} -->
+					<!-- 	<li> -->
+					<!-- 		<a href={link.url}>{link.name}</a> -->
+					<!-- 	</li> -->
+					<!-- {/each} -->
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <p>About</p>
+            <ul class="list-disc list-inside">
+              <li>
+                <a href="/history">History</a>
+              </li>
+              <li>
+                <a href="/cars">Cars</a>
+              </li>
+              <li>
+                <a href="/spotlight">Senior Spotlight</a>
+              </li>
+              <li>
+                <a href="/designs">Senior Designs</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/members">Members</a>
+          </li>
+          <li>
+            <a href="/sponsors">Sponsors</a>
+          </li>
 				</ul>
 			</div>
 

@@ -8,14 +8,18 @@
     Senior Spotlight
     Contact
   */
+	//BITS-UI Components
+	import { DropdownMenu } from 'bits-ui';
 
 	//ICONS
 	import MdiInstagram from '~icons/mdi/instagram';
 	import MdiFacebook from '~icons/mdi/facebook';
+	import RiArrowDownSLine from '~icons/ri/arrow-down-s-line';
 
 	// import unt_logo from '$lib/assets/unt_logo.png';
 	import { page } from '$app/state';
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
+	import { fly } from 'svelte/transition';
 	let pathname = $derived(page.url.pathname);
 
 	let scrollY = $state(0);
@@ -38,6 +42,9 @@
 	afterNavigate(() => {
 		navigating = false;
 	});
+
+	//Handles open menu
+	let menuOpen = $state(false);
 </script>
 
 <!-- SCROLL TRACKING -->
@@ -57,13 +64,84 @@
 		<img src="logo/untLogo.png" alt="UNT Logo" class="h-full object-contain" />
 
 		<!-- NAVIGATION LINKS -->
-		<div class="flex gap-4 font-[Bronzier] text-xl italic">
-			<a class="group" href="/">
-        HOME
-        <span class="block max-w-0 group-hover:max-w-full h-[1px] bg-green-600 transition-all -mt-1"></span>
+		<div class="gap-4 font-[Bronzier] text-xl italic hidden sm:flex" >
+			<a class="group transition-colors duration-100 hover:text-green-300" href="/">
+				HOME
+				<span class="-mt-1 block h-[1px] max-w-0 bg-green-600 transition-all group-hover:max-w-full"
+				></span>
+			</a>
+
+			<!-- <button onclick={openMenu} class="flex cursor-pointer items-center"> -->
+			<!-- 	ABOUT -->
+			<!-- 	<RiArrowDownSLine /> -->
+			<!-- </button> -->
+			<DropdownMenu.Root bind:open={menuOpen}>
+				<DropdownMenu.Trigger
+					class="group flex cursor-pointer items-center transition-all hover:text-green-300"
+				>
+					<p>
+            ABOUT
+            <span class="-mt-1 block h-[1px] max-w-0 bg-green-600 transition-all group-hover:max-w-full"
+            ></span>
+          </p>
+					<div class:rotate-90={menuOpen} class="transition-all">
+						<RiArrowDownSLine />
+					</div>
+				</DropdownMenu.Trigger>
+
+				<DropdownMenu.Portal>
+					<DropdownMenu.Content
+						class="relative z-60 rounded-xl bg-green-700 px-4 py-2 shadow-xl"
+						sideOffset={1}
+						forceMount
+					>
+						{#snippet child({ wrapperProps, props, open })}
+							{#if open}
+								<div {...wrapperProps} class="font-[Bronzier] text-xl text-white">
+									<div {...props} transition:fly={{ y: -5 }}>
+										<DropdownMenu.Item>
+											<a href="/history" class="transition-all duration-100 hover:text-green-300"
+												>History</a
+											>
+										</DropdownMenu.Item>
+										<DropdownMenu.Item>
+											<a href="/cars" class="transition-all duration-100 hover:text-green-300"
+												>Cars</a
+											>
+										</DropdownMenu.Item>
+										<DropdownMenu.Item>
+											<a href="/spotlight" class="transition-all duration-100 hover:text-green-300"
+												>Senior Spotlight</a
+											>
+										</DropdownMenu.Item>
+										<DropdownMenu.Item>
+											<a href="/designs" class="transition-all duration-100 hover:text-green-300"
+												>Senior Designs</a
+											>
+										</DropdownMenu.Item>
+									</div>
+								</div>
+							{/if}
+						{/snippet}
+						<!-- <DropdownMenu.Item -->
+						<!--   class="font-[Bronzier] text-white text-xl"  -->
+						<!-- > -->
+						<!--   <p>TEST</p> -->
+						<!-- </DropdownMenu.Item> -->
+					</DropdownMenu.Content>
+				</DropdownMenu.Portal>
+			</DropdownMenu.Root>
+
+			<a href="/members" class="group transition-colors duration-100 hover:text-green-300">
+        MEMBERS
+        <span class="-mt-1 block h-[1px] max-w-0 bg-green-600 transition-all group-hover:max-w-full"
+				></span>
       </a>
-			<a href="/about">ABOUT</a>
-			<a href="/members">MEMBERS</a>
+			<a href="/sponsors" class="group transition-colors duration-100 hover:text-green-300">
+        SPONSORS
+        <span class="-mt-1 block h-[1px] max-w-0 bg-green-600 transition-all group-hover:max-w-full"
+				></span>
+      </a>
 		</div>
 	</div>
 
@@ -82,8 +160,8 @@
 </div>
 
 <style>
-	a:hover {
-		color: oklch(62.7% 0.194 149.214);
-		transition: color 0.1s ease-in-out;
-	}
+	/* a:hover { */
+	/* 	color: oklch(62.7% 0.194 149.214); */
+	/* 	transition: color 0.1s ease-in-out; */
+	/* } */
 </style>

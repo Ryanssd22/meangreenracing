@@ -1,0 +1,81 @@
+[
+	{
+		"year": 2024,
+		"designs": [
+			{
+				"name": "EV Accumulator Battery Pack",
+				"image": "2024battery.webp"
+			},
+			{
+				"name": "EV Accumulator",
+				"image": "2024acc.webp"
+			},
+			{
+				"name": "Dry Sump Oiling System",
+				"image": "2024oil.webp"
+			}
+		]
+	},
+	{
+		"year": 2022,
+		"designs": [
+			{
+				"name": "Paddle Shifters",
+				"image": "2022paddle.webp"
+			}
+		]
+	},
+	{
+		"year": 2021,
+		"designs": [
+			{
+				"name": "Suspension",
+				"image": "2021sus.webp"
+			}
+		]
+	},
+	{
+		"year": 2020,
+		"designs": [
+			{
+				"name": "Powertrain",
+				"image": "2020power.webp"
+			},
+			{
+				"name": "Electric",
+				"image": "2020electric.webp"
+			}
+		]
+	},
+	{
+		"year": 2019,
+		"designs": [
+			{
+				"name": "Ergonomics",
+				"image": "2019ergo.webp"
+			},
+			{
+				"name": "Suspension",
+				"image": "2019sus.webp"
+			}
+		]
+	},
+	{
+		"year": 2018,
+		"designs": [
+			{
+				"name": "Suspension and Chassis",
+				"image": "2018sus.webp"
+			}
+		]
+	},
+	{
+		"year": 2016,
+		"designs": [
+			{
+				"name": "SAE Formula Engine",
+				"image": "2016engine.webp"
+			}
+		]
+	}
+]

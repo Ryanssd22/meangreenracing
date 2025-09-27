@@ -1,104 +1,100 @@
 [
-	{
-		"name": "Suleiman Abu-Suleiman",
-		"title": "President",
-		"description": "Lorem Ipsum",
-		"image": "suleiman.webp"
-	},
-	{
-		"name": "Emily Gooden",
-		"title": "Vice President",
-		"description": "Lorem Ipsum",
-		"image": "emily.webp"
-	},
-	{
-		"name": "Zach",
-		"title": "EV Power Train Lead",
-		"description": "Lorem Ipsum",
-		"image": "zach.webp"
-	},
-	{
-		"name": "Mario",
-		"title": "Electrical Lead",
-		"description": "It'sa-me",
-		"image": "mario.webp"
-	},
-	{
-		"name": "Hidar",
-		"title": "Lorem Ipsum",
-		"description": "Lorem Ipsum",
-		"image": "hidar.webp"
-	},
   {
-		"name": "Clayton",
-		"title": "Lorem Ipsum",
-		"description": "Lorem Ipsum",
-		"image": "clayton.webp"
-	},
+    "position": "Officers",
+    "members": [
+      {
+        "name": "Suleiman Abu-Suleiman",
+        "title": "President",
+        "description": "Lorem Ipsum",
+        "image": "suleiman.webp"
+      },
+      {
+        "name": "Emily Gooden",
+        "title": "Operations Manager",
+        "description": "Lorem Ipsum",
+        "image": "emily.webp"
+      },
+      {
+        "name": "Aiden Kaerny",
+        "title": "Chief Engineer",
+        "description": "",
+        "image": "aiden2.webp"
+      }
+    ]
+  },
   {
-		"name": "Hayden",
-		"title": "Lorem Ipsum",
-		"description": "Lorem Ipsum",
-		"image": "hayden.webp"
-	},
-  {
-		"name": "Lorem Ipsum1",
-		"title": "Lorem Ipsum",
-		"description": "Lorem Ipsum",
-		"image": "unk1.webp"
-	},
-  {
-		"name": "Lorem Ipsum2",
-		"title": "Lorem Ipsum",
-		"description": "Lorem Ipsum",
-		"image": "unk2.webp"
-	},
-  {
-		"name": "Lorem Ipsum3",
-		"title": "Lorem Ipsum",
-		"description": "Lorem Ipsum",
-		"image": "unk3.webp"
-	},
-  {
-		"name": "Lorem Ipsum4",
-		"title": "Lorem Ipsum",
-		"description": "Lorem Ipsum",
-		"image": "unk4.webp"
-	},
-  {
-		"name": "Lorem Ipsum5",
-		"title": "Lorem Ipsum",
-		"description": "Lorem Ipsum",
-		"image": "unk5.webp"
-	},
-  {
-		"name": "Lorem Ipsum6",
-		"title": "Lorem Ipsum",
-		"description": "Lorem Ipsum",
-		"image": "unk6.webp"
-	},
-  {
-		"name": "Lorem Ipsum7",
-		"title": "Lorem Ipsum",
-		"description": "Lorem Ipsum",
-		"image": "unk7.webp"
-	},
-  {
-		"name": "Lorem Ipsum8",
-		"title": "Lorem Ipsum",
-		"description": "Lorem Ipsum",
-		"image": "unk8.webp"
-	},
-  {
-		"name": "Lorem Ipsum9",
-		"title": "Lorem Ipsum",
-		"description": "Lorem Ipsum",
-		"image": "unk9.webp"
-	},
-  {
-		"name": "Lorem Ipsum10",
-		"title": "Lorem Ipsum",
-		"description": "Lorem Ipsum",
-		"image": "unk10.webp"
+    "position": "Leads",
+    "members": [
+      {
+        "name": "Zach",
+        "title": "EV Powertrain Lead",
+        "description": "Lorem Ipsum",
+        "image": "zach.webp"
+      },
+      {
+        "name": "Mario",
+        "title": "Electrical Lead",
+        "description": "It'sa-me",
+        "image": "mario.webp"
+      },
+      {
+        "name": "Hidar",
+        "title": "Aerodynamics Lead",
+        "description": "Lorem Ipsum",
+        "image": "hidar.webp"
+      },
+      {
+        "name": "Clayton",
+        "title": "Media Manager",
+        "description": "Lorem Ipsum",
+        "image": "clayton.webp"
+      },
+      {
+        "name": "Hayden",
+        "title": "Data Aquisition",
+        "description": "Lorem Ipsum",
+        "image": "hayden.webp"
+      },
+      {
+        "name": "Andrew",
+        "title": "Business Manager",
+        "image": "andrew.webp"
+      },
+      {
+        "name": "Harrison",
+        "title": "Legacy Lead",
+        "image": "harrison.webp"
+      },
+      {
+        "name": "Jeremiah",
+        "title": "Composites Lead",
+        "image": "jeremiah.webp"
+      },
+      {
+        "name": "Leo",
+        "title": "Chassis Lead",
+        "image": "leo.webp"
+      },
+      {
+        "name": "Megan",
+        "title": "Electrical Lead",
+        "image": "megan.webp"
+      },
+      {
+        "name": "Rico",
+        "title": "Drivetrain Lead",
+        "image": "rico.webp"
+      },
+      {
+        "name": "Rusan",
+        "title": "EV Powertrain",
+        "image": "rusan.webp"
+      },
+      {
+        "name": "Victoria",
+        "title": "Ergonomics Lead",
+        "image": "victoria.webp"
+      }
+    ]
   }
 ]

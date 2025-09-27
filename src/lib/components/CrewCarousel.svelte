@@ -1,3 +1,4 @@
+<!-- CREW CAROUSEL -->
 <script>
 	import emblaCarouselSvelte from 'embla-carousel-svelte';
 	import AutoScroll from 'embla-carousel-auto-scroll';
@@ -11,6 +12,13 @@
 		dragFree: true
 	};
 	const plugins = [AutoScroll({ speed: 1 })];
+
+  //Convert headshot_descriptions into array of members
+  let headshot_members = $state([]);
+  headshot_descriptions.forEach((position) => {
+    let members = position.members;
+    headshot_members = headshot_members.concat(members);
+  })
 
 	//Initializes Embla API
 	function onInit(event) {
@@ -36,7 +44,7 @@
 		onemblaInit={onInit}
 	>
 		<div class="embla__container my-2">
-			{#each headshot_descriptions as headshot (headshot.name)}
+			{#each headshot_members as headshot (headshot.name)}
 				<div class="embla__slide flex-center flex w-full items-center">
 					<div class="m-auto flex flex-col">
 						<!-- PHOTO -->
