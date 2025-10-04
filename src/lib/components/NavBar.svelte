@@ -15,6 +15,7 @@
 	import MdiInstagram from '~icons/mdi/instagram';
 	import MdiFacebook from '~icons/mdi/facebook';
 	import RiArrowDownSLine from '~icons/ri/arrow-down-s-line';
+  import IcBaselineDiscord from '~icons/ic/baseline-discord';
 
 	// import unt_logo from '$lib/assets/unt_logo.png';
 	import { page } from '$app/state';
@@ -148,14 +149,19 @@
 	<!-- RIGHT ALIGNED SOCIALS -->
 	<div class="mr-4 flex flex-row items-center gap-2">
 		<!-- INSTAGRAM -->
-		<a href="https://www.instagram.com/meangreenracing/?hl=en">
+		<a href="https://www.instagram.com/meangreenracing/?hl=en" target="_blank">
 			<MdiInstagram class="size-6" />
 		</a>
 
 		<!-- FACEBOOK -->
-		<a href="https://www.facebook.com/UNTMeanGreenRacing/">
+		<a href="https://www.facebook.com/UNTMeanGreenRacing/" target="_blank">
 			<MdiFacebook class="size-6" />
 		</a>
+
+    <!-- DISCORD -->
+    <a href="https://discord.gg/2PckGJCbmp" target="_blank">
+      <IcBaselineDiscord class="size-6" />
+    </a>
 	</div>
 </div>
 
