@@ -16,6 +16,7 @@
 	import MdiFacebook from '~icons/mdi/facebook';
 	import RiArrowDownSLine from '~icons/ri/arrow-down-s-line';
   import IcBaselineDiscord from '~icons/ic/baseline-discord';
+  import MdiLinkedin from '~icons/mdi/linkedin';
 
 	// import unt_logo from '$lib/assets/unt_logo.png';
 	import { page } from '$app/state';
@@ -161,6 +162,11 @@
     <!-- DISCORD -->
     <a href="https://discord.gg/2PckGJCbmp" target="_blank">
       <IcBaselineDiscord class="size-6" />
+    </a>
+
+    <!-- LINKEDIN -->
+    <a href="https://www.linkedin.com/company/fsae-unt-mean-green-racing/" target="_blank">
+      <MdiLinkedin class="size-6" />
     </a>
 	</div>
 </div>
