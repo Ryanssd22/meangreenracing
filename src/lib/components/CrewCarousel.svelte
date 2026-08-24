@@ -2,8 +2,7 @@
 <script>
 	import emblaCarouselSvelte from 'embla-carousel-svelte';
 	import AutoScroll from 'embla-carousel-auto-scroll';
-	import headshot_descriptions from '$lib/headshots/headshot_descriptions.json';
-	const headshot_images = import.meta.glob('$lib/headshots/*.webp');
+	import headshot_descriptions from '$lib/headshot_descriptions.json';
 
 	let emblaApi;
 	const options = {
@@ -13,12 +12,13 @@
 	};
 	const plugins = [AutoScroll({ speed: 1 })];
 
-  //Convert headshot_descriptions into array of members
-  let headshot_members = $state([]);
-  headshot_descriptions.forEach((position) => {
-    let members = position.members;
-    headshot_members = headshot_members.concat(members);
-  })
+	//Convert headshot_descriptions into array of members
+	let headshot_members = $state([]);
+	let current_year = $state(0);
+	headshot_descriptions[current_year].details.forEach((position) => {
+		let members = position.members;
+		headshot_members = headshot_members.concat(members);
+	})
 
 	//Initializes Embla API
 	function onInit(event) {
@@ -57,13 +57,16 @@
 							></div>
 
 							<!-- HEADSHOT IMAGE -->
-							{#await headshot_images[`/src/lib/headshots/${headshot.image}`]() then { default: src }}
-								<img
-									{src}
-									alt={headshot.name}
-									class="absolute inset-0 h-full w-full object-cover transition-all duration-800 group-hover:scale-105"
-								/>
-							{/await}
+							<img
+								src={headshot.image}
+								alt={headshot.name}
+								class="absolute inset-0 h-full w-full object-cover opacity-100 transition-all duration-800 group-hover:scale-105 group-hover:opacity-0"
+							/>
+							<img
+								src={headshot.image_hover}
+								alt={headshot.name}
+								class="absolute inset-0 h-full w-full object-cover opacity-0 transition-all duration-800 group-hover:opacity-100"
+							/>
 						</div>
 
 						<!-- HEADSHOT DESCRIPTION -->

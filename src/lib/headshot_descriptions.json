@@ -1,0 +1,252 @@
+[
+  {
+    "year": 2026,
+    "details": [
+      {
+        "position": "Officers",
+        "members": [
+          {
+            "name": "Hayden Littlehales",
+            "title": "President",
+            "description": "",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=f2a4af9c-ef05-4cc0-82f4-34bd017d55f3",
+            "image_hover": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=e7884b81-647a-4165-9e44-9a3ef220654c"
+          },
+          {
+            "name": "Julian Pluscht",
+            "title": "Chief Engineer",
+            "description": "",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=c47cee48-2216-4e0a-9b7b-a1b614b5fd49",
+            "image_hover": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=05dd32ae-241e-4c43-b31b-570bcf12845a"
+          },
+          {
+            "name": "Niyonika Sharma",
+            "title": "Operations Manager",
+            "description": "",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=1aebd7df-206c-4d13-80a0-b0dc102de7c3",
+            "image_hover": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=f2be2a0a-0a67-41ff-a134-7b742889d25f"
+          }
+        ]
+      },
+      {
+        "position": "Business Leads",
+        "members": [
+          {
+            "name": "Reece Clark",
+            "title": "Events Manager",
+            "description": "",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=bfb3e882-42c6-4653-9c29-36b2a0dfca97",
+            "image_hover": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=aa8dd535-186f-4e3f-887b-af51ead95d9e"
+          },
+          {
+            "name": "Benedict Ryan Simeon",
+            "title": "Media",
+            "description": "",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=91ad0ce6-b83c-43e5-869f-a5da0eb0ce64",
+            "image_hover": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=91ad0ce6-b83c-43e5-869f-a5da0eb0ce64"
+          }
+        ]
+      },
+      {
+        "position": "Design Leads",
+        "members": [
+          {
+            "name": "Bryce Lytle",
+            "title": "Data Aquisition",
+            "description": "",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=fd7a8cb0-54af-4884-b7b5-6633b04f65e1",
+            "image_hover": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=a76b42c4-fece-48b6-abeb-f3067a7a9eb9"
+          },
+          {
+            "name": "Trevor Brewster",
+            "title": "Aerodynamics",
+            "description": "",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=68d3da25-9770-412e-b36f-b401787e2741",
+            "image_hover": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=a751c4ca-5fdf-43e2-928a-f30a92293210"
+          },
+          {
+            "name": "Jacob Wolgamott",
+            "title": "Powertrain",
+            "description": "",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=05385f45-5f4d-4793-be93-de1bdb43d6c9",
+            "image_hover": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=0f73238f-e4c5-4e89-9e31-6033cd125265"
+          },
+          {
+            "name": "Alessandro Rico",
+            "title": "Ergonomics",
+            "description": "",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=b3be2657-ca50-4eed-a5e6-2ecdd8f19705",
+            "image_hover": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=0a26195c-ab94-4e8a-9f33-9cf9afb9feaa"
+          },
+          {
+            "name": "Andrew",
+            "title": "Quartermaster",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=e5920126-c0e7-4c96-8a27-2c9b14437ab3",
+            "image_hover": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=45964487-3068-43a3-a2be-5d205bf64b37"
+          },
+          {
+            "name": "Christopher Cook",
+            "title": "Suspension",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=72591e1f-4662-4348-8321-a95131db3e65",
+            "image_hover": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=7ad104a2-0090-4198-809b-0c4d088ca46e"
+          },
+          {
+            "name": "Harrison",
+            "title": "Legacy",
+            "image": ""
+          },
+          {
+            "name": "Ellery",
+            "title": "",
+            "image": ""
+          },
+          {
+            "name": "Samuel Malagon",
+            "title": "Chassis",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=c9d47bfe-21a8-45ea-b7f3-dd2e98d331da",
+            "image_hover": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=94e94914-d6f6-46e8-98dc-ed302cde2dde"
+          },
+          {
+            "name": "Evan Lemmons",
+            "title": "Composites",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=6150d5e7-09d5-4c07-be86-cfe2b5739212",
+            "image_hover": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=0e62af46-2684-4b21-8533-5db8c9386eb2"
+          },
+          {
+            "name": "Mario Moscetta",
+            "title": "EV Head",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=a7b64dec-eb3e-4952-b007-c5365370e2b1",
+            "image_hover": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=66d81124-6bbb-41e9-8fcb-8ddb300f62f9"
+          },
+          {
+            "name": "Joshua Arriaga",
+            "title": "EV Low Voltage",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=e3fae30e-a7f6-4cdc-8dd7-c79a2a00f6a3",
+            "image_hover": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=cb22b514-36b5-4008-8fbe-1951c896030e"
+          },
+          {
+            "name": "Ethan Wong",
+            "title": "Wiring Harness",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=5f6721cb-7a54-449b-ba16-a51395b079b2",
+            "image_hover": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=06c4fe06-ca64-4866-8499-695c6d5bdc1f"
+          },
+          {
+            "name": "Igor Leeck",
+            "title": "EV High Voltage Legacy",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=45c843fd-ebab-4074-ad09-c2453514ed65",
+            "image_hover": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=035faeb6-348e-4300-8d72-034e3d884c95"
+          },
+          {
+            "name": "Bryan Hastye",
+            "title": "EV Legacy",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=21675f97-668f-4a62-b796-01fa32829c08",
+            "image_hover": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=2a273888-6f9b-4d8a-82de-c2540303e30f"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "year": 2025,
+    "details": [
+      {
+        "position": "Officers",
+        "members": [
+          {
+            "name": "Suleiman Abu-Suleiman",
+            "title": "President",
+            "description": "Lorem Ipsum",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=5ecd5ef7-17c3-4ac8-88fa-86d142cdeea6"
+          },
+          {
+            "name": "Emily Gooden",
+            "title": "Operations Manager",
+            "description": "Lorem Ipsum",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=243102d9-37c8-42af-aead-8608486298dd"
+          },
+          {
+            "name": "Aiden Kaerny",
+            "title": "Chief Engineer",
+            "description": "",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=cc5faad2-2d9d-4267-9504-7ad50b5f67c5"
+          }
+        ]
+      },
+      {
+        "position": "Leads",
+        "members": [
+          {
+            "name": "Zach",
+            "title": "EV Powertrain Lead",
+            "description": "",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=afb71f85-6f40-43df-874f-f9a75776e53e"
+          },
+          {
+            "name": "Mario",
+            "title": "Electrical Lead",
+            "description": "It'sa-me",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=b7b524df-126e-49f6-b183-8133fd5970a1"
+          },
+          {
+            "name": "Hidar",
+            "title": "Aerodynamics Lead",
+            "description": "",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=d1ca48ac-48bd-48c7-8e81-6d0ada417381"
+          },
+          {
+            "name": "Clayton",
+            "title": "Media Manager",
+            "description": "",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=8626eb35-137c-4693-badf-dab92259878e"
+          },
+          {
+            "name": "Hayden",
+            "title": "Data Aquisition",
+            "description": "",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=e6b1f53b-0723-456c-8c1c-43f34060416f"
+          },
+          {
+            "name": "Andrew",
+            "title": "Business Manager",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=a2bd4731-9140-4623-b4ff-7d7cc37c12af"
+          },
+          {
+            "name": "Harrison",
+            "title": "Legacy Lead",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=c09c0e2c-d6e4-430b-aa9d-04546a668b7d"
+          },
+          {
+            "name": "Jeremiah",
+            "title": "Composites Lead",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=b89a7cdf-4936-4414-8dea-66814ff1396d"
+          },
+          {
+            "name": "Leo",
+            "title": "Chassis Lead",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=93a4fd4f-a622-4559-8320-8cbe0669b4da"
+          },
+          {
+            "name": "Megan",
+            "title": "Electrical Lead",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=7546f83d-3daf-4e24-99cc-80b105848079"
+          },
+          {
+            "name": "Rico",
+            "title": "Drivetrain Lead",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=bdde0b97-c1b5-4122-b158-f91e557b6997"
+          },
+          {
+            "name": "Rusan",
+            "title": "EV Powertrain",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=6b422c27-cb78-468a-915c-b3d5d721a4bd"
+          },
+          {
+            "name": "Victoria",
+            "title": "Ergonomics Lead",
+            "image": "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=64d8ee22-62ac-40a7-960b-ae91d673ea3e"
+          }
+        ]
+      }
+    ]
+  }
+]

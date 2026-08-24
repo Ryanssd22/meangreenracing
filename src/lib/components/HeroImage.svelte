@@ -3,39 +3,67 @@
 	// This component is the full screen hero image background.
 	// Every few seconds this image changes to a new one
 	// Preemtively loads in a "preloadedImage" for quick transitions
-	import { onMount } from 'svelte';
+	import { onMount, onDestroy } from 'svelte';
+	import { browser } from '$app/environment';
 	import { fly } from 'svelte/transition';
 	import { quintIn, quintOut } from 'svelte/easing';
 	import { beforeNavigate } from '$app/navigation';
-  import DotPattern from '$lib/components/DotPattern.svelte';
+  	import DotPattern from '$lib/components/DotPattern.svelte';
 
 	//Image imports
-	import firstImage from '$lib/assets/sae_photos/hero/9F0A3892.webp';
-	const heroImages = import.meta.glob('/src/lib/assets/sae_photos/hero/*.webp');
+	const firstImage = "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=51a1f166-c125-435b-bed2-93317697ea44"
+	import photo_list from '$lib/assets/sae_photos.json' with { type: "json" }
+	const heroImagesValues = photo_list.map(photo => photo.src)
 
-	const IMAGE_TIMEOUT = 3000;
+	const IMAGE_TIMEOUT = 3000;		// How long the component should wait per image change
+	const TRANSITION_DURATION = 2000;	// in/out durations must stay <= IMAGE_TIMEOUT to avoid overlapping transitions
 
 	let scrollY = $state(0);
 	let viewportHeight = $state(0);
 	let preloadedImage = $state(firstImage);
 	let currentImage = $state(firstImage);
-	let heroImagesValues = Object.values(heroImages);
 
 	let randomImageTimeout = null;
-	onMount(async () => {
-		console.log('Mounting, choosing first image...');
-
-		await chooseRandomImage();
-		setImageTimeout();
-	});
-	async function setImageTimeout() {
-		if (!timeoutStop) {
+	function setImageTimeout() {
+		// Always clear any existing timer first so we can never end up with
+		// two overlapping recursive chains running at once.
+		clearTimeout(randomImageTimeout);
+		if (!timeoutStop && (!browser || !document.hidden)) {
 			randomImageTimeout = setTimeout(async () => {
 				await chooseRandomImage();
 				setImageTimeout();
 			}, IMAGE_TIMEOUT);
 		}
 	}
+
+	// Pause the timer while the tab is backgrounded so throttled timers don't
+	// pile up and burst-fire when the tab regains focus.
+	function handleVisibilityChange() {
+		if (document.hidden) {
+			console.log('TAB HIDDEN - pausing image timer');
+			clearTimeout(randomImageTimeout);
+		} else if (!timeoutStop) {
+			console.log('TAB VISIBLE - resuming image timer');
+			setImageTimeout();
+		}
+	}
+
+	onMount(async () => {
+		console.log('Mounting, choosing first image...');
+		navigating = false;
+
+		await chooseRandomImage();
+		setImageTimeout();
+
+		document.addEventListener('visibilitychange', handleVisibilityChange);
+	});
+
+	onDestroy(() => {
+		clearTimeout(randomImageTimeout);
+		if (browser) {
+			document.removeEventListener('visibilitychange', handleVisibilityChange);
+		}
+	});
 
 	//Start and stop timeout handling
 	let timeoutStop = false;
@@ -55,6 +83,8 @@
 	$inspect('CURRENT IMAGE: ', currentImage);
 
 	// Chooses random image from heroImagesValues
+	let old_index = 0;
+	let index = 0;
 	async function chooseRandomImage() {
 		console.log('Choosing Image...');
 
@@ -62,9 +92,12 @@
 		currentImage = preloadedImage;
 
 		// Preloading next image
-		const index = Math.floor(Math.random() * heroImagesValues.length);
-		let imageModule = await heroImagesValues[index]();
-		preloadedImage = imageModule.default;
+		while (old_index == index) {
+			index = Math.floor(Math.random() * heroImagesValues.length);
+		}
+		old_index = index
+		let imageModule = heroImagesValues[index];
+		preloadedImage = imageModule;
 
 		console.log('Preloaded Image', index);
 	}
@@ -94,8 +127,8 @@
 			<img
 				alt="Hero"
 				src={currentImage}
-				in:fly|global={!navigating ? { y: 25, duration: 2000, easing: quintOut } : { duration: 0 }}
-				out:fly|global={!navigating ? { duration: 4000, easing: quintIn } : { duration: 0 }}
+				in:fly|global={!navigating ? { y: 25, duration: TRANSITION_DURATION, easing: quintOut } : { duration: 0 }}
+				out:fly|global={!navigating ? { duration: TRANSITION_DURATION, easing: quintIn } : { duration: 0 }}
 				class="absolute inset-0 h-full w-full object-cover brightness-65"
 			/>
 		{/key}

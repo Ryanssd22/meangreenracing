@@ -1,11 +1,11 @@
 <!-- MEMBERS PAGE -->
 <script>
-	import headshot_descriptions from '$lib/headshots/headshot_descriptions.json';
+	import headshots from '$lib/headshot_descriptions.json';
   import { fly } from 'svelte/transition';
   import crew_banner from '$lib/assets/sae_photos/banners/crew_banner.webp';
   import PageHeader from '$lib/components/PageHeader.svelte';
-	const headshot_images = import.meta.glob('$lib/headshots/*.webp');
 
+  const headshot_descriptions = headshots[0].details  
 </script>
 
 <div class="flex-center flex flex-col w-full items-center">
@@ -28,9 +28,12 @@
                 <div in:fly={{ y:5 }} class="absolute inset-0 bg-gradient-to-t from-green-700 from-10% to-80% to-white/0 z-0 transition-colors group-hover:from-green-600"></div>
 
                 <!-- HEADSHOT IMAGE -->
-                {#await headshot_images[`/src/lib/headshots/${member.image}`]() then { default: src }}
-                  <img in:fly={{ y:5, delay: 50*i }} {src} alt={member.name} class="absolute inset-0 z-30 h-full w-full object-cover group-hover:scale-105 duration-800" />
-                {/await}
+                <img in:fly={{ y:5, delay: 50*i }} src={member.image} alt={member.name} class="absolute inset-0 z-30 h-full w-full object-cover transition-all duration-100 group-hover:opacity-0" />
+                <img
+                  src={member.image_hover}
+                  alt={member.name}
+                  class="absolute inset-0 h-full w-full object-cover opacity-0 transition-all duration-100 group-hover:opacity-100"
+                />
               </div>
               <h2 class="font-bold text-lg">{member.name}</h2>
               <h3 class="italic">{member.title}</h3>
@@ -40,5 +43,8 @@
         </div>
       </div>
     {/each}
+  </div>
+  <div>
+    <p>Click to see old crew</p>
   </div>
 </div>
