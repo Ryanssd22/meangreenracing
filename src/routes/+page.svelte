@@ -1,26 +1,29 @@
 <!-- LANDING PAGE -->
 
 <script>
-  //About us
-  import michigan from '$lib/assets/sae_photos/home/michigan.jpg';
-  import CheckerboardPattern from '$lib/components/CheckerboardPattern.svelte';
-  //What we do
-  import innovative from '$lib/assets/sae_photos/home/innovative.jpg';
-  import integrated from '$lib/assets/sae_photos/home/integrated.jpg';
-  import professional from '$lib/assets/sae_photos/home/professional.jpg';
+	//About us
+	import michigan from '$lib/assets/sae_photos/home/michigan.jpg';
+	import CheckerboardPattern from '$lib/components/CheckerboardPattern.svelte';
+	//What we do
+	import innovative from '$lib/assets/sae_photos/home/innovative.jpg';
+	import integrated from '$lib/assets/sae_photos/home/integrated.jpg';
+	import professional from '$lib/assets/sae_photos/home/professional.jpg';
 
-  //Components
+	//Components
 	import HeroImage from '$lib/components/HeroImage.svelte';
 	import CrewCarousel from '$lib/components/CrewCarousel.svelte';
-  import F1Stripe from '$lib/components/F1Stripe.svelte';
+	import F1Stripe from '$lib/components/F1Stripe.svelte';
 	import { fly } from 'svelte/transition';
-  import { onMount } from 'svelte';
+	import { onMount } from 'svelte';
 
-  //Ready on mount
-  let ready = $state(false)
-  onMount(() => {
-    ready = true;
-  });
+	// Props from server
+	let { data } = $props();
+
+	//Ready on mount
+	let ready = $state(false)
+	onMount(() => {
+		ready = true;
+	});
 
 	//Hero text
 	const hero_text_choices = ['Engineers', 'Innovators', 'Businessmen', 'Developers'];
@@ -33,13 +36,21 @@
 			hero_index = Math.floor(Math.random() * hero_text_choices.length);
 		}
 	}, HERO_INTERVAL);
+
+	// Hero Image
+	let heroImagesValues = $state(["https://4fzz3fozay0zmmgv.public.blob.vercel-storage.com/hero/DSC00589%20%281%29.webp"])
+	data.hero_response.then((response) => {
+		heroImagesValues = response.blobs.map(blob => blob.url);
+		heroImagesValues.shift();
+		console.log("ARRAY:", heroImagesValues)
+	})
 </script>
 
 <!-- HERO COMPONENT -->
 <div class="relative z-10 h-screen w-full overflow-hidden">
 	<!-- HERO IMAGE -->
 	<div class="absolute inset-0 scale-103">
-		<HeroImage />
+		<HeroImage {heroImagesValues}/>
 	</div>
 
 	<!-- BODY CONTENT -->

@@ -15,8 +15,8 @@
 	import MdiInstagram from '~icons/mdi/instagram';
 	import MdiFacebook from '~icons/mdi/facebook';
 	import RiArrowDownSLine from '~icons/ri/arrow-down-s-line';
-  import IcBaselineDiscord from '~icons/ic/baseline-discord';
-  import MdiLinkedin from '~icons/mdi/linkedin';
+	import IcBaselineDiscord from '~icons/ic/baseline-discord';
+	import MdiLinkedin from '~icons/mdi/linkedin';
 
 	// import unt_logo from '$lib/assets/unt_logo.png';
 	import { page } from '$app/state';
@@ -66,10 +66,10 @@
 		<img src="logo/untLogo.png" alt="UNT Logo" class="h-full object-contain" />
 
 		<!-- NAVIGATION LINKS -->
-		<div class="gap-4 font-[Bronzier] text-xl italic hidden sm:flex" >
-			<a class="group transition-colors duration-100 hover:text-green-300" href="/">
+		<div class="gap-4 font-[Bronzier] text-xl italic hidden md:flex" >
+			<a class="group nav_link" class:text-green-300={pathname == "/"} href="/">
 				HOME
-				<span class="-mt-1 block h-[1px] max-w-0 bg-green-600 transition-all group-hover:max-w-full"
+				<span class="-mt-1 block h-[1px] max-w-0 bg-green-600 transition-all group-hover:max-w-full" class:max-w-full={pathname == "/"}
 				></span>
 			</a>
 
@@ -134,14 +134,19 @@
 				</DropdownMenu.Portal>
 			</DropdownMenu.Root>
 
-			<a href="/members" class="group transition-colors duration-100 hover:text-green-300">
+			<a href="/members" class="nav_link group" class:text-green-300={pathname == "/members"}>
         MEMBERS
-        <span class="-mt-1 block h-[1px] max-w-0 bg-green-600 transition-all group-hover:max-w-full"
+        <span class="-mt-1 block h-[1px] max-w-0 bg-green-600 transition-all group-hover:max-w-full" class:max-w-full={pathname == "/members"}
 				></span>
       </a>
-			<a href="/sponsors" class="group transition-colors duration-100 hover:text-green-300">
+	  <a href="/media" class="group nav_link" class:text-green-300={pathname == "/media"}>
+        MEDIA
+        <span class="-mt-1 block h-[1px] max-w-0 bg-green-600 transition-all group-hover:max-w-full" class:max-w-full={pathname == "/media"}
+				></span>
+      </a>
+			<a href="/sponsors" class="group nav_link" class:text-green-300={pathname == "/sponsors"}>
         SPONSORS
-        <span class="-mt-1 block h-[1px] max-w-0 bg-green-600 transition-all group-hover:max-w-full"
+        <span class="-mt-1 block h-[1px] max-w-0 bg-green-600 transition-all group-hover:max-w-full" class:max-w-full={pathname == "/sponsors"}
 				></span>
       </a>
 		</div>
@@ -150,30 +155,34 @@
 	<!-- RIGHT ALIGNED SOCIALS -->
 	<div class="mr-4 flex flex-row items-center gap-2">
 		<!-- INSTAGRAM -->
-		<a href="https://www.instagram.com/meangreenracing/?hl=en" target="_blank">
+		<a class="nav_link" href="https://www.instagram.com/meangreenracing/?hl=en" target="_blank">
 			<MdiInstagram class="size-6" />
 		</a>
 
 		<!-- FACEBOOK -->
-		<a href="https://www.facebook.com/UNTMeanGreenRacing/" target="_blank">
+		<a class="nav_link" href="https://www.facebook.com/UNTMeanGreenRacing/" target="_blank">
 			<MdiFacebook class="size-6" />
 		</a>
 
-    <!-- DISCORD -->
-    <a href="https://discord.gg/2PckGJCbmp" target="_blank">
-      <IcBaselineDiscord class="size-6" />
-    </a>
+		<!-- DISCORD -->
+		<a class="nav_link" href="https://discord.gg/2PckGJCbmp" target="_blank">
+		<IcBaselineDiscord class="size-6" />
+		</a>
 
-    <!-- LINKEDIN -->
-    <a href="https://www.linkedin.com/company/fsae-unt-mean-green-racing/" target="_blank">
-      <MdiLinkedin class="size-6" />
-    </a>
+		<!-- LINKEDIN -->
+		<a class="nav_link" href="https://www.linkedin.com/company/fsae-unt-mean-green-racing/" target="_blank">
+		<MdiLinkedin class="size-6" />
+		</a>
 	</div>
 </div>
 
 <style>
+	@reference "../../app.css";
 	/* a:hover { */
 	/* 	color: oklch(62.7% 0.194 149.214); */
 	/* 	transition: color 0.1s ease-in-out; */
 	/* } */
+	.nav_link {
+		@apply transition-all duration-100 hover:text-green-300 active:text-green-500 active:scale-99;
+	}
 </style>

@@ -9,13 +9,15 @@
 	import { quintIn, quintOut } from 'svelte/easing';
 	import { beforeNavigate } from '$app/navigation';
   	import DotPattern from '$lib/components/DotPattern.svelte';
+	import { list } from '@vercel/blob'
 
 	//Image imports
-	const firstImage = "https://myunt.sharepoint.com/sites/FSAEBusinessProject/_layouts/15/download.aspx?UniqueId=51a1f166-c125-435b-bed2-93317697ea44"
-	import photo_list from '$lib/assets/sae_photos.json' with { type: "json" }
-	const heroImagesValues = photo_list.map(photo => photo.src)
+	const firstImage = "https://4fzz3fozay0zmmgv.public.blob.vercel-storage.com/hero/DSC00589%20%281%29.webp"
+	// import photo_list from '$lib/assets/sae_photos.json' with { type: "json" }
+	// const heroImagesValues = photo_list.map(photo => photo.src)
+	let { heroImagesValues } = $props();
 
-	const IMAGE_TIMEOUT = 3000;		// How long the component should wait per image change
+	const IMAGE_TIMEOUT = 6000;		// How long the component should wait per image change
 	const TRANSITION_DURATION = 2000;	// in/out durations must stay <= IMAGE_TIMEOUT to avoid overlapping transitions
 
 	let scrollY = $state(0);
@@ -92,7 +94,7 @@
 		currentImage = preloadedImage;
 
 		// Preloading next image
-		while (old_index == index) {
+		while (old_index == index && heroImagesValues.length > 1) {
 			index = Math.floor(Math.random() * heroImagesValues.length);
 		}
 		old_index = index
