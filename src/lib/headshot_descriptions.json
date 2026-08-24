@@ -7,7 +7,7 @@
         "members": [
           {
             "name": "Hayden Littlehales",
-            "title": "President",
+            "title": "Project Manager",
             "description": "",
             "image": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/hayden.webp",
             "image_hover": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/hayden_hover.webp"
@@ -33,7 +33,7 @@
         "members": [
           {
             "name": "Reece Clark",
-            "title": "Events Manager",
+            "title": "Event Coordination",
             "description": "",
             "image": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/reece.webp",
             "image_hover": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/reece_hover.webp"
@@ -51,7 +51,7 @@
         "members": [
           {
             "name": "Bryce Lytle",
-            "title": "Data Aquisition",
+            "title": "Data Acquisition",
             "description": "",
             "image": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/bryce.webp",
             "image_hover": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/bryce_hover.webp"
@@ -90,13 +90,13 @@
             "image_hover": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/chris_hover.webp"
           },
           {
-            "name": "Harrison",
-            "title": "Legacy",
+            "name": "Ellery",
+            "title": "Suspension",
             "image": ""
           },
           {
-            "name": "Ellery",
-            "title": "Suspension",
+            "name": "Harrison",
+            "title": "IC Powertrain",
             "image": ""
           },
           {
@@ -112,14 +112,19 @@
             "image_hover": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/evan_hover.webp"
           },
           {
+            "name": "Zach Humphrey",
+            "title": "Composites",
+            "image": ""
+          },
+          {
             "name": "Mario Moscetta",
-            "title": "EV Head",
+            "title": "Head Electrical",
             "image": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/mario.webp",
             "image_hover": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/mario_hover.webp"
           },
           {
             "name": "Joshua Arriaga",
-            "title": "EV Low Voltage",
+            "title": "Low Voltage IC",
             "image": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/josh.webp",
             "image_hover": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/josh_hover.webp"
           },
@@ -131,7 +136,7 @@
           },
           {
             "name": "Igor Leeck",
-            "title": "EV High Voltage Legacy",
+            "title": "EV Legacy",
             "image": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/igor.webp",
             "image_hover": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/igor_hover.webp"
           },
