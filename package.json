@@ -41,11 +41,13 @@
 	},
 	"dependencies": {
 		"@sveltejs/adapter-vercel": "^5.10.2",
+		"@vercel/blob": "^2.8.0",
 		"bits-ui": "^2.11.4",
 		"clsx": "^2.1.1",
 		"embla-carousel-auto-scroll": "^8.6.0",
 		"embla-carousel-svelte": "^8.6.0",
 		"gsap": "^3.13.0",
-		"tailwind-merge": "^3.3.1"
+		"tailwind-merge": "^3.3.1",
+		"vercel": "^59.5.0"
 	}
 }

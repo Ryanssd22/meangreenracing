@@ -22,7 +22,6 @@ There are currently 7 sites:
 
 # Photos
 
-Most of the media, including what you see on the hero component, the member headshots, and the media page,
-are stored in the `Mean Green Racing oneDrive`.
+Most of the media, including what you see on the hero component, the member headshots, and the media page, are stored in the vercel Blob.
 
-The links are found by selecting the image in OneDrive, selecting "Embed," copying the link found in "src," and replacing "embed" with "download"
+The Vercel project should be tied to the saeunt@gmail.com account as well.
