@@ -18,7 +18,7 @@
 	import IcBaselineDiscord from '~icons/ic/baseline-discord';
 	import MdiLinkedin from '~icons/mdi/linkedin';
 
-	// import unt_logo from '$lib/assets/unt_logo.png';
+	import unt_logo from '$lib/assets/unt_logo.png';
 	import { page } from '$app/state';
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
 	import { fly } from 'svelte/transition';
@@ -63,7 +63,7 @@
 	<!-- LEFT ALIGNED NAVIGATION-->
 	<div class="mx-8 flex h-full flex-row items-center gap-8">
 		<!-- MEAN GREEN RACING LOGO -->
-		<img src="logo/untLogo.png" alt="UNT Logo" class="h-full object-contain" />
+		<img src={unt_logo} alt="UNT Logo" class="h-full object-contain" />
 
 		<!-- NAVIGATION LINKS -->
 		<div class="gap-4 font-[Bronzier] text-xl italic hidden md:flex" >

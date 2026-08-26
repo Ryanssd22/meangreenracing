@@ -6,7 +6,10 @@
   import PageHeader from '$lib/components/PageHeader.svelte';
   import eagle_image from '$lib/assets/unt_logo_eagle.webp'
 
-  const headshot_descriptions = headshots[0].details  
+  let headshot_index = $state(0);
+  let headshot_year = $derived(headshots[headshot_index])
+  let headshot_descriptions = $derived(headshot_year.details)
+
 </script>
 
 <div class="flex-center flex flex-col w-full items-center">
@@ -20,12 +23,12 @@
         <h2 class="font-[Bronzier] tracking-wide text-5xl font-bold italic">{position.position}</h2>
 
         <!-- HEADSHOT GRID -->
-        <div class="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="grid w-full grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {#each position.members as member, i (member.name)} 
             <!-- HEADSHOT COMPONENT -->
             <div class="flex flex-col flex-center items-center">
               <!-- TRANSFORMS DIV -->
-              <div class="group relative h-70 w-60 hover:rotate-1 hover:scale-104 transition-all duration-800">
+              <div class="group relative h-35 w-30 sm:h-70 sm:w-60 hover:rotate-1 hover:scale-104 transition-all duration-800">
                 
                 <!-- CLIP DIV -->
                 <div class="absolute inset-0 rounded-md" style="clip-path: inset(-50px 0px 0px 0px);">
@@ -37,14 +40,14 @@
 
                   <!-- HEADSHOT IMAGE -->
                   {#if member.image_hover}
-                    <img in:fly={{ y:5, delay: 50*i }} src={member.image} alt={member.name} class="absolute inset-0 z-30 h-full w-full object-cover transition-all duration-300 group-hover:scale-110 group-hover:opacity-0" />
+                    <img in:fly={{ y:5, delay: 50*i }} src={headshot_year.image_prefix + member.image} alt={member.name} class="absolute inset-0 z-30 h-full w-full object-cover transition-all duration-300 group-hover:scale-110 group-hover:opacity-0" />
                     <img
-                      src={member?.image_hover}
-                      alt={member.name}
+                      src={headshot_year.image_prefix + member?.image_hover}
+                      alt="{member.name}"
                       class="absolute inset-0 h-full w-full object-cover opacity-0 transition-all duration-300 group-hover:scale-110 group-hover:opacity-100"
                     />
                   {:else}
-                    <img in:fly={{ y:5, delay: 50*i }} src={member.image} alt={member.name} class="absolute inset-0 z-30 h-full w-full object-cover transition-all duration-300 group-hover:scale-110 origin-bottom" />
+                    <img in:fly={{ y:5, delay: 50*i }} src={headshot_year.image_prefix + member.image} alt={member.name} class="absolute inset-0 z-30 h-full w-full object-cover transition-all duration-300 group-hover:scale-110 origin-bottom" />
                   {/if}
                   
                 </div>

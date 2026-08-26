@@ -17,7 +17,7 @@
 	// const heroImagesValues = photo_list.map(photo => photo.src)
 	let { heroImagesValues } = $props();
 
-	const IMAGE_TIMEOUT = 6000;		// How long the component should wait per image change
+	const IMAGE_TIMEOUT = 5000;		// How long the component should wait per image change
 	const TRANSITION_DURATION = 2000;	// in/out durations must stay <= IMAGE_TIMEOUT to avoid overlapping transitions
 
 	let scrollY = $state(0);

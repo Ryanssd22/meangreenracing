@@ -1,0 +1,35 @@
+{
+    "2016": [
+        {
+            "folder_name": "misc",
+            "title": "2016",
+            "thumbnail": "https://ryansserver.org/gallery/2016/misc/20150926_130834(1).webp"
+        },
+        {
+            "folder_name": "lincoln",
+            "title": "Lincoln Competition",
+            "thumbnail": "https://ryansserver.org/gallery/2016/lincoln/DSC07127.webp"
+        }
+    ],
+    "2015": [
+        {
+            "folder_name": "misc",
+            "title": "2015",
+            "thumbnail": "https://ryansserver.org/gallery/2015/misc/20140919-DSC00945.webp"
+        }
+    ],
+    "2014": [
+        {
+            "folder_name": "misc",
+            "title": "2014",
+            "thumbnail": "https://ryansserver.org/gallery/2014/misc/team_2012_2013.webp"
+        }
+    ],
+    "2013": [
+        {
+            "folder_name": "misc",
+            "title": "2013",
+            "thumbnail": "https://ryansserver.org/gallery/2013/misc/bajaUNT.webp"
+        }
+    ]
+}

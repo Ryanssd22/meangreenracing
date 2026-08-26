@@ -10,11 +10,12 @@ const s3 = new S3Client({
   },
 });
 
-export const load = (({}) => {
-    const command = new ListObjectsV2Command({ Bucket: "mgr-media", Prefix: "hero/" });
-    const hero_response = s3.send(command);
-    
-    return {
-        "hero_response": hero_response,
-    };
+export const load = (({ params }) => {
+  const folder = params.folder.replace("_", "/");
+  const command = new ListObjectsV2Command({ Bucket: "mgr-media", Prefix: ("gallery/" + folder) });
+  const gallery_response = s3.send(command);
+  
+  return {
+      "gallery_response": gallery_response,
+  };
 });

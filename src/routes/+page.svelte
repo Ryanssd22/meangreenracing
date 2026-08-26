@@ -38,11 +38,13 @@
 	}, HERO_INTERVAL);
 
 	// Hero Image
+	import { PUBLIC_CLOUDFLARE_S2_ENDPOINT } from '$env/static/public';
 	let heroImagesValues = $state(["https://4fzz3fozay0zmmgv.public.blob.vercel-storage.com/hero/DSC00589%20%281%29.webp"])
 	data.hero_response.then((response) => {
-		heroImagesValues = response.blobs.map(blob => blob.url);
+		console.log("HERO RESPONSE:", response);
+		heroImagesValues = response?.Contents.map(content => (PUBLIC_CLOUDFLARE_S2_ENDPOINT + content.Key));
 		heroImagesValues.shift();
-		console.log("ARRAY:", heroImagesValues)
+		console.log("ARRAY:", heroImagesValues);
 	})
 </script>
 
