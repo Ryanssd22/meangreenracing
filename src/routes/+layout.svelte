@@ -2,6 +2,7 @@
 <script lang="ts">
 	import '../app.css';
 	import NavBar from '$lib/components/NavBar.svelte';
+	import untlogo from '$lib/assets/unt_logo_eagle.webp';
 
 	import { page } from '$app/state';
 	let pathname = $derived(page.url.pathname);
@@ -17,7 +18,7 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href="logo/untLogoEagle.png" />
+	<link rel="icon" href={untlogo} />
 </svelte:head>
 
 <!-- FULL DIV -->
