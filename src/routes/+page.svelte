@@ -39,7 +39,7 @@
 
 	// Hero Image
 	import { PUBLIC_CLOUDFLARE_S2_ENDPOINT } from '$env/static/public';
-	let heroImagesValues = $state(["https://4fzz3fozay0zmmgv.public.blob.vercel-storage.com/hero/DSC00589%20%281%29.webp"])
+	let heroImagesValues = $state(["https://ryansserver.org/gallery/2015/misc/20140919-DSC00945.webp"])
 	data.hero_response.then((response) => {
 		console.log("HERO RESPONSE:", response);
 		heroImagesValues = response?.Contents.map(content => (PUBLIC_CLOUDFLARE_S2_ENDPOINT + content.Key));
