@@ -16,8 +16,8 @@ Get-ChildItem *.webp | ForEach-Object { magick $_.FullName -resize "380x380^" -g
 
     const { data } = $props();
 
-    // CLOUDFLARE WORKER
-    const CLOUDFLARE_WORKER = "https://still-hall-23d4.benedictrsimeon.workers.dev/?img="
+    // LINK THAT TURNS IT INTO THUMBAIL
+    const THUMBNAIL_WORKER = "/api/thumbnail?img="
 
     // GETTING CLOUDFLARE IMAGES
     let images = $state([]);
@@ -25,9 +25,9 @@ Get-ChildItem *.webp | ForEach-Object { magick $_.FullName -resize "380x380^" -g
     let gallery_loaded = $state(false);
     data.gallery_response.then(async (response) => {
         console.log("RESPONSE:", response)
-        const image_links = response?.Contents.map(image => (PUBLIC_CLOUDFLARE_S2_ENDPOINT + image.Key));
-        // images.shift();
-        images = image_links.map(link => ({"link": link, dimensions: getImageDimensions(link)}));
+        let image_links = response?.Contents.map(image => (PUBLIC_CLOUDFLARE_S2_ENDPOINT + image.Key));
+        image_links = image_links.filter(link => link.includes(".webp") || link.includes(".mp4"));
+        images = await image_links.map(async (link) => ({"link": link, thumbnail: await getThumbnail(link)}));
         console.log("IMAGES:", images);
 
         // PHOTOSWIPE Lightbox initialization
@@ -46,24 +46,17 @@ Get-ChildItem *.webp | ForEach-Object { magick $_.FullName -resize "380x380^" -g
     });
 
     // Image utilities
-    const getImageDimensions = (url) => {
+    async function getThumbnail(image_link) {
         if (browser) {
-            return new Promise((resolve, reject) => {
-                const img = new Image();
-                img.src = url;
-                
-                // img.decode() ensures the image is fully loaded and ready to display
-                img.decode()
-                .then(() => {
-                    resolve({
-                    width: img.naturalWidth,
-                    height: img.naturalHeight
-                    });
-                })
-                .catch((err) => reject(new Error("Failed to load image: " + err)));
-            });
+            const sliced_link = image_link.slice(PUBLIC_CLOUDFLARE_S2_ENDPOINT.length)
+            console.log(sliced_link);
+            const res = await fetch('/api/thumbnail?img=' + encodeURIComponent(sliced_link));
+            const blob = await res.blob();
+            const imgUrl = URL.createObjectURL(blob);
+            return imgUrl;
         }
-    };
+        return undefined;
+    }
 </script>
 
 <div class="flex flex-col items-center min-h-screen">
@@ -71,7 +64,6 @@ Get-ChildItem *.webp | ForEach-Object { magick $_.FullName -resize "380x380^" -g
     <!-- <div class="pswp-gallery grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-4" id="gallery--main"> -->
     {#if images.length != 0 && gallery_loaded}
         <div class="pswp-gallery grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-4" id="gallery--main">
-        <!-- <div class="pswp-gallery" id="gallery--main"> -->
         {#each images.entries() as [i, image]}
             <a in:fly|global={{delay: i*10}} class="block w-40 h-40 bg-blue-500 overflow-hidden" 
                 target="_blank" href={image.link}
@@ -85,5 +77,4 @@ Get-ChildItem *.webp | ForEach-Object { magick $_.FullName -resize "380x380^" -g
     {:else}
         <h2>Loading...</h2>
     {/if}
-    <!-- </div> -->
 </div>
