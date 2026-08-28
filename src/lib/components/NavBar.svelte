@@ -139,9 +139,9 @@
         <span class="-mt-1 block h-[1px] max-w-0 bg-green-600 transition-all group-hover:max-w-full" class:max-w-full={pathname == "/members"}
 				></span>
       </a>
-	  <a href="/media" class="group nav_link" class:text-green-300={pathname == "/media"}>
+	  <a href="/media" class="group nav_link" class:text-green-300={pathname.includes("/media")}>
         MEDIA
-        <span class="-mt-1 block h-[1px] max-w-0 bg-green-600 transition-all group-hover:max-w-full" class:max-w-full={pathname == "/media"}
+        <span class="-mt-1 block h-[1px] max-w-0 bg-green-600 transition-all group-hover:max-w-full" class:max-w-full={pathname.includes("/media")}
 				></span>
       </a>
 			<a href="/sponsors" class="group nav_link" class:text-green-300={pathname == "/sponsors"}>

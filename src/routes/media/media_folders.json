@@ -1,4 +1,66 @@
 {
+    "2025": [
+        {
+            "folder_name": "michigan",
+            "title": "2025 Michigan Competition",
+            "thumbnail": "https://ryansserver.org/gallery/2025/michigan/DSC00001.webp"
+        },
+        {
+            "folder_name": "03-21 Lucky Lou's",
+            "title": "03-21 Lucky Lou's",
+            "thumbnail": "https://ryansserver.org/gallery/2025/03-21%20Lucky%20Lou's/THUMB__CW_8320.webp"
+        },
+        {
+            "folder_name": "03-08 Work Day",
+            "title": "03-08 Work Day",
+            "thumbnail": "https://ryansserver.org/gallery/2025/03-08%20Work%20Day/THUMB_PSX_20250308_103025.webp"
+        },
+        {
+            "folder_name": "01-25 Work Day",
+            "title": "01-25 Work Day",
+            "thumbnail": "https://ryansserver.org/gallery/2025/01-25%20Work%20Day/IMG_9224-Enhanced-NR.webp"
+        }
+    ],
+    "2022": [
+        {
+            "folder_name": "michigan",
+            "title": "2022 Michigan Competition",
+            "thumbnail": "https://ryansserver.org/gallery/2022/michigan/THUMB_Copy%20of%20IMG_6602.webp"
+        }
+    ],
+    "2020": [
+        {
+            "folder_name": "misc",
+            "title": "2020",
+            "thumbnail": "https://ryansserver.org/gallery/2020/misc/THUMB_Close%20up_2%20(4%20of%204).webp"
+        }
+    ],
+    "2019": [
+        {
+            "folder_name": "misc",
+            "title": "2019",
+            "thumbnail": "https://ryansserver.org/gallery/2019/misc/DSC_6050.webp"
+        }
+    ],
+    "2018": [
+        {
+            "folder_name": "2018-09-29 UTA Autocross",
+            "title": "2018-09-29 UTA Autocross",
+            "thumbnail": "https://ryansserver.org/gallery/2018/2018-09-29%20UTA%20Autocross/THUMB_FL%20Sus%20cam%20Compressed.webp"
+        }
+    ],
+    "2017": [
+        {
+            "folder_name": "2017-05-27 Test Day",
+            "title": "05-27 Test Day",
+            "thumbnail": "https://ryansserver.org/gallery/2017/2017-05-27%20Test%20Day/DSC_0249.webp"
+        },
+        {
+            "folder_name": "unveiling",
+            "title": "F17 Unveiling",
+            "thumbnail": "https://ryansserver.org/gallery/2017/unveiling/_MG_9417.webp"
+        }
+    ],
     "2016": [
         {
             "folder_name": "misc",
