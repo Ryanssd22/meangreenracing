@@ -190,21 +190,21 @@
   }
 
   /* CHASSIS GRID LINES */
-  .tech-grid {
+  /* .tech-grid {
     background-image: linear-gradient(rgba(0, 133, 62, 0.08) 1px, transparent 1px),
                       linear-gradient(90deg, rgba(0, 133, 62, 0.08) 1px, transparent 1px);
     background-size: 16px 16px;
-  }
+  } */
 
   /* INDUSTRIAL CORNER BRACKETS (UNT GREEN) */
-  .corner-bracket {
+  /* .corner-bracket {
     position: absolute;
     width: 8px;
     height: 8px;
     border-color: #00853E;
     pointer-events: none;
-  }
-  .top-left {
+  } */
+  /* .top-left {
     top: 6px;
     left: 6px;
     border-top: 2px solid #00853E;
@@ -215,7 +215,7 @@
     right: 6px;
     border-bottom: 2px solid #00853E;
     border-right: 2px solid #00853E;
-  }
+  } */
 
   .card-body {
     position: relative;
