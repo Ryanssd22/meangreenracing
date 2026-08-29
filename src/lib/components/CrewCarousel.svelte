@@ -3,6 +3,7 @@
 	import emblaCarouselSvelte from 'embla-carousel-svelte';
 	import AutoScroll from 'embla-carousel-auto-scroll';
 	import headshot_descriptions from '$lib/headshot_descriptions.json';
+	import { PUBLIC_CLOUDFLARE_S2_ENDPOINT } from '$env/static/public';
 
 	let emblaApi;
 	const options = {
@@ -58,12 +59,12 @@
 
 							<!-- HEADSHOT IMAGE -->
 							<img
-								src={headshot.image}
+								src={PUBLIC_CLOUDFLARE_S2_ENDPOINT + headshot.image}
 								alt={headshot.name}
 								class="absolute inset-0 h-full w-full object-cover opacity-100 transition-all duration-800 group-hover:scale-105 group-hover:opacity-0"
 							/>
 							<img
-								src={headshot.image_hover}
+								src={PUBLIC_CLOUDFLARE_S2_ENDPOINT + headshot.image_hover}
 								alt={headshot.name}
 								class="absolute inset-0 h-full w-full object-cover opacity-0 transition-all duration-800 group-hover:opacity-100"
 							/>

@@ -9,22 +9,22 @@
             "name": "Hayden Littlehales",
             "title": "Project Manager",
             "description": "",
-            "image": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/hayden.webp",
-            "image_hover": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/hayden_hover.webp"
+            "image": "headshots/2026-2027/hayden.webp",
+            "image_hover": "headshots/2026-2027/hayden_hover.webp"
           },
           {
             "name": "Julian Pluscht",
             "title": "Chief Engineer",
             "description": "",
-            "image": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/julian.webp",
-            "image_hover": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/julian_hover.webp"
+            "image": "headshots/2026-2027/julian.webp",
+            "image_hover": "headshots/2026-2027/julian_hover.webp"
           },
           {
             "name": "Niyonika Sharma",
             "title": "Operations Manager",
             "description": "",
-            "image": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/niyo.webp",
-            "image_hover": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/niyo_hover.webp"
+            "image": "headshots/2026-2027/niyo.webp",
+            "image_hover": "headshots/2026-2027/niyo_hover.webp"
           }
         ]
       },
@@ -35,14 +35,14 @@
             "name": "Reece Clark",
             "title": "Event Coordination",
             "description": "",
-            "image": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/reece.webp",
-            "image_hover": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/reece_hover.webp"
+            "image": "headshots/2026-2027/reece.webp",
+            "image_hover": "headshots/2026-2027/reece_hover.webp"
           },
           {
             "name": "Benedict Ryan Simeon",
             "title": "Media",
             "description": "",
-            "image": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/ryan.webp"
+            "image": "headshots/2026-2027/ryan.webp"
           }
         ]
       },
@@ -53,98 +53,101 @@
             "name": "Bryce Lytle",
             "title": "Data Acquisition",
             "description": "",
-            "image": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/bryce.webp",
-            "image_hover": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/bryce_hover.webp"
+            "image": "headshots/2026-2027/bryce.webp",
+            "image_hover": "headshots/2026-2027/bryce_hover.webp"
           },
           {
             "name": "Trevor Brewster",
             "title": "Aerodynamics",
             "description": "",
-            "image": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/trevor.webp",
-            "image_hover": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/trevor_hover.webp"
+            "image": "headshots/2026-2027/trevor.webp",
+            "image_hover": "headshots/2026-2027/trevor_hover.webp"
           },
           {
             "name": "Jacob Wolgamott",
             "title": "Powertrain",
             "description": "",
-            "image": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/jacob.webp",
-            "image_hover": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/jacob_hover.webp"
+            "image": "headshots/2026-2027/jacob.webp",
+            "image_hover": "headshots/2026-2027/jacob_hover.webp"
           },
           {
             "name": "Alessandro Rico",
             "title": "Ergonomics",
             "description": "",
-            "image": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/rico.webp",
-            "image_hover": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/rico_hover.webp"
+            "image": "headshots/2026-2027/rico.webp",
+            "image_hover": "headshots/2026-2027/rico_hover.webp"
           },
           {
             "name": "Andrew",
             "title": "Quartermaster",
-            "image": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/andrew.webp",
-            "image_hover": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/andrew_hover.webp"
+            "image": "headshots/2026-2027/andrew.webp",
+            "image_hover": "headshots/2026-2027/andrew_hover.webp"
           },
           {
             "name": "Christopher Cook",
             "title": "Suspension",
-            "image": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/chris.webp",
-            "image_hover": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/chris_hover.webp"
+            "image": "headshots/2026-2027/chris.webp",
+            "image_hover": "headshots/2026-2027/chris_hover.webp"
           },
           {
             "name": "Ellery",
             "title": "Suspension",
-            "image": ""
+            "image": "headshots/2026-2027/ellery.webp",
+            "image_hover": "headshots/2026-2027/ellery_hover.webp"
           },
           {
             "name": "Harrison",
             "title": "IC Powertrain",
-            "image": ""
+            "image": "headshots/2026-2027/harrison.webp",
+            "image_hover": "headshots/2026-2027/harrison_hover.webp"
           },
           {
             "name": "Samuel Malagon",
             "title": "Chassis",
-            "image": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/sam.webp",
-            "image_hover": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/sam_hover.webp"
+            "image": "headshots/2026-2027/sam.webp",
+            "image_hover": "headshots/2026-2027/sam_hover.webp"
           },
           {
             "name": "Evan Lemmons",
             "title": "Composites",
-            "image": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/evan.webp",
-            "image_hover": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/evan_hover.webp"
+            "image": "headshots/2026-2027/evan.webp",
+            "image_hover": "headshots/2026-2027/evan_hover.webp"
           },
           {
             "name": "Zach Humphrey",
             "title": "Composites",
-            "image": ""
+            "image": "headshots/2026-2027/zach.webp",
+            "image_hover": "headshots/2026-2027/zach_hover.webp"
           },
           {
             "name": "Mario Moscetta",
             "title": "Head Electrical",
-            "image": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/mario.webp",
-            "image_hover": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/mario_hover.webp"
+            "image": "headshots/2026-2027/mario.webp",
+            "image_hover": "headshots/2026-2027/mario_hover.webp"
           },
           {
             "name": "Joshua Arriaga",
             "title": "Low Voltage IC",
-            "image": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/josh.webp",
-            "image_hover": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/josh_hover.webp"
+            "image": "headshots/2026-2027/josh.webp",
+            "image_hover": "headshots/2026-2027/josh_hover.webp"
           },
           {
             "name": "Ethan Wong",
             "title": "Wiring Harness",
-            "image": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/ethan.webp",
-            "image_hover": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/ethan_hover.webp"
+            "image": "headshots/2026-2027/ethan.webp",
+            "image_hover": "headshots/2026-2027/ethan_hover.webp"
           },
           {
             "name": "Igor Leeck",
             "title": "EV Legacy",
-            "image": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/igor.webp",
-            "image_hover": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/igor_hover.webp"
+            "image": "headshots/2026-2027/igor.webp",
+            "image_hover": "headshots/2026-2027/igor_hover.webp"
           },
           {
             "name": "Bryan Hastye",
             "title": "EV Legacy",
-            "image": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/bryan.webp",
-            "image_hover": "https://1pjt8bzugjs1phxe.public.blob.vercel-storage.com/2026-2027/bryan_hover.webp"
+            "image": "headshots/2026-2027/bryan.webp",
+            "image_hover": "headshots/2026-2027/bryan_hover.webp"
           }
         ]
       }

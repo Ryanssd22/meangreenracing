@@ -4,7 +4,8 @@
   import { fly } from 'svelte/transition';
   import crew_banner from '$lib/assets/sae_photos/banners/crew_banner.webp';
   import PageHeader from '$lib/components/PageHeader.svelte';
-  import eagle_image from '$lib/assets/unt_logo_eagle.webp'
+  import eagle_image from '$lib/assets/unt_logo_eagle.webp';
+  import { PUBLIC_CLOUDFLARE_S2_ENDPOINT } from '$env/static/public';
 
   const headshot_descriptions = headshots[0].details  
 </script>
@@ -37,14 +38,14 @@
 
                   <!-- HEADSHOT IMAGE -->
                   {#if member.image_hover}
-                    <img in:fly={{ y:5, delay: 50*i }} src={member.image} alt={member.name} class="absolute inset-0 z-30 h-full w-full object-cover transition-all duration-300 group-hover:scale-110 group-hover:opacity-0" />
+                    <img in:fly={{ y:5, delay: 50*i }} src={PUBLIC_CLOUDFLARE_S2_ENDPOINT + member.image} alt={member.name} class="absolute inset-0 z-30 h-full w-full object-cover transition-all duration-300 group-hover:scale-110 group-hover:opacity-0" />
                     <img
-                      src={member?.image_hover}
+                      src={PUBLIC_CLOUDFLARE_S2_ENDPOINT + member?.image_hover}
                       alt={member.name}
                       class="absolute inset-0 h-full w-full object-cover opacity-0 transition-all duration-300 group-hover:scale-110 group-hover:opacity-100"
                     />
                   {:else}
-                    <img in:fly={{ y:5, delay: 50*i }} src={member.image} alt={member.name} class="absolute inset-0 z-30 h-full w-full object-cover transition-all duration-300 group-hover:scale-110 origin-bottom" />
+                    <img in:fly={{ y:5, delay: 50*i }} src={PUBLIC_CLOUDFLARE_S2_ENDPOINT + member.image} alt={member.name} class="absolute inset-0 z-30 h-full w-full object-cover transition-all duration-300 group-hover:scale-110 origin-bottom" />
                   {/if}
                   
                 </div>
