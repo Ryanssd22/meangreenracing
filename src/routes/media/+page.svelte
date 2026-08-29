@@ -20,10 +20,11 @@ The media is stored in the vercel blob
 
 <div class="flex-center flex flex-col w-full items-center">
     <PageHeader src={media_banner} alt="Media Banner" title="Our Media"/>
-    <div class="flex flex-col w-full h-full">
+    <div class="flex flex-col w-full h-full px-4 font-[Bronzier] tracking-wide pt-4">
         {#each Object.entries(media_folders).sort((a, b) => Number(b[0]) - Number(a[0])) as [year, folders]}
-            <h2 class="text-2xl font-bold">{year}</h2>
-            <div class="grid grid-cols-3">
+            <h2 class="text-5xl font-bold">{year}</h2>
+            <hr />
+            <div class="grid grid-cols-2 lg:grid-cols-3">
                 {#each folders as folder}
                     <div class="p-5">
                         <Card3D width="250px" height="400px" title={folder.title} thumbnail={folder.thumbnail} navigation_link={'/media/' + year + '_' + folder.folder_name}/>

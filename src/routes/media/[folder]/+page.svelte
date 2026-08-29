@@ -183,7 +183,7 @@ Get-ChildItem *.mp4 | ForEach-Object { ffmpeg -i $_.FullName -vf "thumbnail,scal
                             </div>
                         </div>
                     </div>
-                    <p class="text-[8px]">{image.link.slice(PUBLIC_CLOUDFLARE_S2_ENDPOINT.length + page.params?.folder.length + 9)}</p>
+                    <!-- <p class="text-[8px]">{image.link.slice(PUBLIC_CLOUDFLARE_S2_ENDPOINT.length + page.params?.folder.length + 9)}</p> -->
                 </a>
             {:else}
                 {#if !image.file.startsWith("THUMB_")}
@@ -193,7 +193,7 @@ Get-ChildItem *.mp4 | ForEach-Object { ffmpeg -i $_.FullName -vf "thumbnail,scal
                         data-cropped="true"
                         rel="noreferrer">
                         <img src={PUBLIC_CLOUDFLARE_S2_ENDPOINT + 'gallery/' + page.params.folder?.replace("_", "/") + "/THUMB_" + image.file} alt="" class="w-40 h-40 object-cover"/>
-                        <p class="text-[8px]">{image.link.slice(PUBLIC_CLOUDFLARE_S2_ENDPOINT.length + page.params?.folder.length + 9)}</p>
+                        <!-- <p class="text-[8px]">{image.link.slice(PUBLIC_CLOUDFLARE_S2_ENDPOINT.length + page.params?.folder.length + 9)}</p> -->
                     </a>
                 {/if}
             {/if}
