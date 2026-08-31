@@ -143,10 +143,10 @@ Get-ChildItem *.mp4 | ForEach-Object { ffmpeg -i $_.FullName -vf "thumbnail,scal
 
 <div class="flex flex-col items-center min-h-screen">
     <!-- HEADER -->
-    <div class="flex flex-row items-center justify-between w-full h-20 px-10">
-        <a href="/media">Back</a>
+    <div class="flex flex-row items-center justify-between w-full h-20 px-5">
+        <a href="/media" class="w-10">Back</a>
         <h2 class="font-bold text-2xl">{page.params.folder.slice(5)}</h2>
-        <div></div>
+        <div class="w-10"></div>
     </div>
 
     <!-- GALLERY -->
@@ -200,7 +200,7 @@ Get-ChildItem *.mp4 | ForEach-Object { ffmpeg -i $_.FullName -vf "thumbnail,scal
         {/each}
         </div>
     {:else}
-        <h2>Loading...</h2>
+        <h2>Loading Full Gallery...</h2>
     {/if}
 </div>
 
