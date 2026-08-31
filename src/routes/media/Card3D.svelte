@@ -89,7 +89,7 @@
         <!-- CARBON FIBER PATTERN & BACKGROUND IMAGE -->
         <div class="carbon-texture absolute inset-0 z-0"></div>
         {#if thumbnail}
-            <img class="absolute inset-0 z-10 h-full w-full object-cover mix-blend-luminosity opacity-90" src={thumbnail} alt={title}> 
+            <img class="absolute inset-0 z-10 h-full w-full object-cover" src={thumbnail} alt={title}> 
         {/if}
 
         <!-- TECHNICAL GRID OVERLAY -->
@@ -100,7 +100,7 @@
         <div class="corner-bracket bottom-right z-30"></div> -->
 
         <!-- DARK GRADIENT OVERLAY FOR READABILITY -->
-        <div class="absolute inset-0 z-20" style="background-image: linear-gradient(to top, rgba(5, 12, 8, 0.95) 0%, rgba(5, 12, 8, 0.4) 50%, rgba(5, 12, 8, 0.1) 100%);"></div>
+        <div class="absolute inset-0 z-20 opacity-60" style="background-image: linear-gradient(to top, rgba(5, 12, 8, 0.95) 0%, rgba(5, 12, 8, 0.4) 50%, rgba(5, 12, 8, 0.1) 100%);"></div>
 
         <div class="card-body z-30 flex flex-col justify-end text-left">
             <slot>
@@ -186,7 +186,7 @@
       linear-gradient(207deg, #122417 5px, transparent 5px) 10px 5px;
     background-color: #051409;
     background-size: 20px 20px;
-    opacity: 0.7;
+    opacity: 0.6;
   }
 
   /* CHASSIS GRID LINES */

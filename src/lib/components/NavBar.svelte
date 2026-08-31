@@ -17,6 +17,7 @@
 	import RiArrowDownSLine from '~icons/ri/arrow-down-s-line';
 	import IcBaselineDiscord from '~icons/ic/baseline-discord';
 	import MdiLinkedin from '~icons/mdi/linkedin';
+	import MenuHamburgerIcon from '~icons/charm/menu-hamburger';
 
 	import unt_logo from '$lib/assets/unt_logo.png';
 	import { page } from '$app/state';
@@ -47,6 +48,11 @@
 
 	//Handles open menu
 	let menuOpen = $state(false);
+
+	// Hamburger logic
+	let hamburger_open = $state(false);
+	import { innerWidth } from 'svelte/reactivity/window';
+	import '$lib/hamburgers.css'
 </script>
 
 <!-- SCROLL TRACKING -->
@@ -153,7 +159,7 @@
 	</div>
 
 	<!-- RIGHT ALIGNED SOCIALS -->
-	<div class="mr-4 flex flex-row items-center gap-2">
+	<div class="mr-4 md:flex flex-row items-center gap-2 hidden">
 		<!-- INSTAGRAM -->
 		<a class="nav_link" href="https://www.instagram.com/meangreenracing/?hl=en" target="_blank">
 			<MdiInstagram class="size-6" />
@@ -174,7 +180,25 @@
 		<MdiLinkedin class="size-6" />
 		</a>
 	</div>
+
+	<!-- HAMBURGER -->
+	<div class="md:hidden flex mx-5 z-100">
+		<!-- <button onclick={() => {hamburger_open = true}}>
+			<MenuHamburgerIcon class="white size-8 hover:cursor-pointer" />
+		</button> -->
+		<button class="hamburger hamburger--spin size-15 z-100" class:is-active={hamburger_open} onclick={() => {hamburger_open = true}} type="button">
+		<span class="hamburger-box">
+			<span class="hamburger-inner"></span>
+		</span>
+		</button>  
+	</div>
 </div>
+
+<!-- MOBILE NAVBAR DISPLAY -->
+{#if hamburger_open}
+<div in:fly={{opacity:100, x:innerWidth.current}} class="bg-blue-500 w-screen h-screen fixed inset-0 z-90">
+</div>
+{/if}
 
 <style>
 	@reference "../../app.css";
