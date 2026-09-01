@@ -1,7 +1,7 @@
 <!-- CHECKERBOARD PATTERN -->
 <!-- https://svelte.dev/playground/48d889e1263747cab08a46c07557a901?version=5.19.10 -->
 
-<div class="checkerboard opacity-10" style="--size: 50px"></div>
+<div class="checkerboard opacity-10 z-0" style="--size: 50px"></div>
 
 <style>
 	.checkerboard {
