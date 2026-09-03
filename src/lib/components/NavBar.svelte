@@ -17,13 +17,58 @@
 	import RiArrowDownSLine from '~icons/ri/arrow-down-s-line';
 	import IcBaselineDiscord from '~icons/ic/baseline-discord';
 	import MdiLinkedin from '~icons/mdi/linkedin';
-	import MenuHamburgerIcon from '~icons/charm/menu-hamburger';
 
 	import unt_logo from '$lib/assets/unt_logo.png';
 	import { page } from '$app/state';
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
 	import { fly } from 'svelte/transition';
 	let pathname = $derived(page.url.pathname);
+
+	// Links
+	const main_links = [
+		{
+			"name": "Home",
+			"href": "/",
+		},
+		{
+			"name": "About",
+			"href": "/",
+			"type": "menu",
+			"menu": [
+
+			]
+		},
+		{
+			"name": "Members",
+			"href": "/members",
+		},
+		{
+			"name": "Media",
+			"href": "/media",
+		},
+		{
+			"name": "Sponsors",
+			"href": "/sponsors",
+		},
+	]
+	const icon_links = [
+		{
+			"icon": MdiInstagram,
+			"href": "https://www.instagram.com/meangreenracing/?hl=en",
+		},
+		{
+			"icon": MdiFacebook,
+			"href": "https://www.facebook.com/UNTMeanGreenRacing/",
+		},
+		{
+			"icon": IcBaselineDiscord,
+			"href": "https://discord.gg/2PckGJCbmp",
+		},
+		{
+			"icon": MdiLinkedin,
+			"href": "https://www.linkedin.com/company/fsae-unt-mean-green-racing/",
+		},
+	]
 
 	let scrollY = $state(0);
 	let altNavbar = $derived.by(() => {
@@ -85,7 +130,7 @@
 			<!-- </button> -->
 			<DropdownMenu.Root bind:open={menuOpen}>
 				<DropdownMenu.Trigger
-					class="group flex cursor-pointer items-center transition-all hover:text-green-300"
+					class="group flex cursor-pointer items-center transition-all hover:text-green-300 {menuOpen ? 'text-green-300' : ''}"
 				>
 					<p>
             ABOUT
@@ -160,25 +205,11 @@
 
 	<!-- RIGHT ALIGNED SOCIALS -->
 	<div class="mr-4 md:flex flex-row items-center gap-2 hidden">
-		<!-- INSTAGRAM -->
-		<a class="nav_link" href="https://www.instagram.com/meangreenracing/?hl=en" target="_blank">
-			<MdiInstagram class="size-6" />
-		</a>
-
-		<!-- FACEBOOK -->
-		<a class="nav_link" href="https://www.facebook.com/UNTMeanGreenRacing/" target="_blank">
-			<MdiFacebook class="size-6" />
-		</a>
-
-		<!-- DISCORD -->
-		<a class="nav_link" href="https://discord.gg/2PckGJCbmp" target="_blank">
-		<IcBaselineDiscord class="size-6" />
-		</a>
-
-		<!-- LINKEDIN -->
-		<a class="nav_link" href="https://www.linkedin.com/company/fsae-unt-mean-green-racing/" target="_blank">
-		<MdiLinkedin class="size-6" />
-		</a>
+		{#each icon_links as {href, icon: Icon}}
+			<a class="nav_link" href={href} target="_blank">
+				<Icon class="size-6"/>
+			</a>
+		{/each}
 	</div>
 
 	<!-- HAMBURGER -->
